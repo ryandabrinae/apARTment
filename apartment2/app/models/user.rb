@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   has_many :rooms
   has_many :arts
+  has_many :places
 end
