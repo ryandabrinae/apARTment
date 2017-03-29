@@ -1,0 +1,12 @@
+<h1>test</h1>
+
+<%= form_for(@art) do |f| %>
+      <%= f.label :title %>
+      <%= f.text_field :title, :place_holder => "Search for art by artist!" %>
+
+      <%= f.hidden_field :user_id, :value => current_user.id %>
+      <%= f.submit :class => "newArtButton" %>
+  <% end %>
+
+
+
