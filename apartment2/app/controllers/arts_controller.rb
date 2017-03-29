@@ -1,4 +1,6 @@
 config.gem "httparty"
+response =
+  HTTParty.get("https://www.rijksmuseum.nl/api/en/collection?key=RG3BxRnZ&format=json&q=")
 
 class ArtsController < ApplicationController
 
@@ -33,7 +35,5 @@ class ArtsController < ApplicationController
 
 end
 
-response =
-  HTTParty.get("https://www.rijksmuseum.nl/api/en/collection?key=RG3BxRnZ&format=json&q=")
 
 
