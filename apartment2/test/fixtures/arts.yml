@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: 
+  user: 
+  color1,: MyString
+  color2,: MyString
+  color3,: MyString
+  color4,: MyString
+  color5,: MyString
+  color6,: MyString
+  maker,: MyString
+  year,: MyString
+  img_url,: MyString
+  API_id: MyString
+
+two:
+  title: 
+  user: 
+  color1,: MyString
+  color2,: MyString
+  color3,: MyString
+  color4,: MyString
+  color5,: MyString
+  color6,: MyString
+  maker,: MyString
+  year,: MyString
+  img_url,: MyString
+  API_id: MyString
