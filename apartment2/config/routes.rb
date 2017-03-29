@@ -6,8 +6,8 @@ Rails.application.routes.draw do
 
   get "/profile", to: "users#profile", as: :arts
   get "/profile/", to: "users#index", as: :user
-  get "/profile/", to: "users#new", as: :new_art
-  post "/profile/", to: "users#create", as: :create_art
+  get "/profile/", to: "arts#new", as: :new_art
+  post "/profile/", to: "arts#create", as: :create_art
 
 def index
     # @user = User.find(params[:id])
