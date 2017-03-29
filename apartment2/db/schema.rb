@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170329204310) do
+ActiveRecord::Schema.define(version: 20170329210719) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,12 +42,33 @@ ActiveRecord::Schema.define(version: 20170329204310) do
     t.index ["room_id"], name: "index_furnitures_on_room_id", using: :btree
   end
 
+  create_table "places", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "status"
+    t.index ["user_id"], name: "index_places_on_user_id", using: :btree
+  end
+
+  create_table "places_rooms", force: :cascade do |t|
+    t.integer  "room_id"
+    t.integer  "place_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["place_id"], name: "index_places_rooms_on_place_id", using: :btree
+    t.index ["room_id"], name: "index_places_rooms_on_room_id", using: :btree
+  end
+
   create_table "rooms", force: :cascade do |t|
     t.string   "type"
     t.string   "name"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "status"
+    t.integer  "place_id"
+    t.index ["place_id"], name: "index_rooms_on_place_id", using: :btree
     t.index ["user_id"], name: "index_rooms_on_user_id", using: :btree
   end
 
@@ -78,6 +99,10 @@ ActiveRecord::Schema.define(version: 20170329204310) do
   end
 
   add_foreign_key "furnitures", "rooms"
+  add_foreign_key "places", "users"
+  add_foreign_key "places_rooms", "places"
+  add_foreign_key "places_rooms", "rooms"
+  add_foreign_key "rooms", "places"
   add_foreign_key "rooms", "users"
   add_foreign_key "rooms_arts", "arts"
   add_foreign_key "rooms_arts", "rooms"
