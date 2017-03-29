@@ -2,8 +2,8 @@
 class UsersController < ApplicationController
 
   def index
-    # @user = User.find(params[:id])
-    @arts = Art.all
+    @user = User.find(params[:id])
+    @arts = @user.arts
 
     # @arts = @user.arts
   end
