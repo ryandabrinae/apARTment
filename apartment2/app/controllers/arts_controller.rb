@@ -16,7 +16,7 @@ class ArtsController < ApplicationController
   end
 
   def show
-      @art = Art.find(params[:id])
+      @art = Art.where(id: params[:id], user_id: current_user.id).first
   end
 
   private
