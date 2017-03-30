@@ -4,16 +4,19 @@ Rails.application.routes.draw do
 
   root to: "users#index"
 
-  get "/profile", to: "users#profile", as: :arts
   get "/profile/", to: "users#index", as: :user
-  get "/profile/", to: "arts#new", as: :new_art
-  post "/profile/", to: "search_arts#keyword", as: :create_art
 
+  get "/profile/gallery", to: "art#index", as: :arts
+  post "/profile/gallery", to: "arts#create", as: :create_art
+  get "profile/gallery/:id", to: "arts#show", as: :art
 
   get "/profile/rooms", to: "rooms#index", as: :rooms
   get "/profile/rooms/new", to: "rooms#new", as: :new_room
   post "/profile/rooms/", to: "rooms#create"
   get "profile/rooms/:id", to: "rooms#show", as: :room
 
+  get "/search", to: "search#index", as: :searches
+  post "/search", to: "search#keyword", as: :search_keyword
+  get "/search/:id", to: "search#show", as: :search
 
 end
