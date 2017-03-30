@@ -13,7 +13,7 @@ class RoomsController < ApplicationController
 
         if @room.save
             redirect_to @room
-        else 
+        else
             puts @room
             redirect_to :back
         end
@@ -23,10 +23,11 @@ class RoomsController < ApplicationController
 
     def show
         @room = Room.find(params[:id])
+        @art = Roomsart.all
         @addToRoom = RoomsArt.new
     end
 
-    private 
+    private
     def room_params
         params.require(:room).permit(:name, :status, :user_id)
     end

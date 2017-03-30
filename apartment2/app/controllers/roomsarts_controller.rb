@@ -20,7 +20,7 @@ class RoomsartsController < ApplicationController
         end
     end
 
-    private 
+    private
     def set_params
     end
 end
