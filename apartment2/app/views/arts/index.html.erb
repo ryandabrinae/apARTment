@@ -1,7 +1,6 @@
 <% @arts.each do |art| %>
-  <h1><%= art.title %></h1>
+  <h1><%= link_to art.title, art_path(art)%></h1>
   <p> By <%= art.maker %> </p>
   <%= art.year %>
   <img src= <%= art.img_url %> />
 <% end %>
-
