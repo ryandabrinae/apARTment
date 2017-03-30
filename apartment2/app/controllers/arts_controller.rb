@@ -17,7 +17,7 @@ class ArtsController < ApplicationController
 
   def show
       @art = Art.where(id: params[:id], user_id: current_user.id).first
-      @addToRoom = RoomsArt.new
+      @addToRoom = ArtsRoom.new
   end
 
   private
