@@ -1,0 +1,12 @@
+<%= form_for(@room) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name%>
+    
+    <%= f.label :type_of_room %>
+    <%= select_tag(:type_of_room, options_for_select([['Bedroom', 'Bedroom'], ['Living Room', 'Living Room']])) %>
+    
+    <%= f.hidden_field :status, value: "editing" %>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+
+    <%= f.submit %>
+<% end %>
