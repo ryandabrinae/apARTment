@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get "/profile/gallery", to: "arts#index", as: :arts
   post "/profile/gallery", to: "arts#create", as: :create_art
   get "profile/gallery/:id", to: "arts#show", as: :art
+  delete "profile/gallery/:id", to: "arts#destroy"
 
   get "/profile/rooms", to: "rooms#index", as: :rooms
   get "/profile/rooms/new", to: "rooms#new", as: :new_room
