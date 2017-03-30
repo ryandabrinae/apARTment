@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   get "/profile/rooms/new", to: "rooms#new", as: :new_room
   post "/profile/rooms/", to: "rooms#create"
   get "profile/rooms/:id", to: "rooms#show", as: :room
+  get "/profile/", to: "arts#new", as: :new_art
+  post "/profile/", to: "search_arts#keyword", as: :create_art
 
 def index
     # @user = User.find(params[:id])
