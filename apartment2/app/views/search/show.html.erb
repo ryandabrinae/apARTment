@@ -1,0 +1,18 @@
+<%= @response["artObject"]["title"] %>
+
+<img src=<%= @response["artObject"]["webImage"]["url"]%> />
+
+<%= form_for(@art) do |f| %>
+    <%= f.hidden_field :title, value: @response["artObject"]["title"]%>
+    <%= f.hidden_field :maker, value: @response["artObject"]["principalMaker"]%>
+    <%= f.hidden_field :year, value: @response["artObject"]["dating"]["year"]%>
+    <%= f.hidden_field :img_url, value: @response["artObject"]["webImage"]["url"]%>
+    <%= f.hidden_field :API_id, value: @response["artObject"]["objectNumber"]%>
+
+    <% @response["artObject"]["normalizedColors"].each_with_index do |color, i| %>
+        <%= f.hidden_field "color#{i+1}".to_s, value: color %>
+    <% end %>
+
+    <%= f.submit %>
+
+<% end %>
