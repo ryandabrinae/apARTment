@@ -4,4 +4,8 @@ class Art < ApplicationRecord
 
     belongs_to :user
     has_and_belongs_to_many :rooms
+
+    def madeBy
+        "#{title} by #{maker} (#{year})"
+    end
 end
