@@ -26,6 +26,3 @@ class ArtsController < ApplicationController
     end
 
 end
-
-
-

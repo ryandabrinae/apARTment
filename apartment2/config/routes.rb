@@ -18,5 +18,5 @@ Rails.application.routes.draw do
   get "/search", to: "search#index", as: :searches
   post "/search", to: "search#keyword", as: :search_keyword
   get "/search/:id", to: "search#show", as: :search
-  
+
 end
