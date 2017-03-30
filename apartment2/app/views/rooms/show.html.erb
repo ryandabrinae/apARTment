@@ -1,2 +1,13 @@
 <h1> <%= @room.name %> </h1>
+
 <p><%= @art.title %></p>
+
+
+<%= form_for(@addToRoom) do |f| %>
+    <%= f.hidden_field :room, value: @room.id %>
+    <%= select_tag(:art, options_from_collection_for_select(current_user.arts, 'id', "madeBy")
+    ) %>
+
+    <%= f.submit %>
+<% end %>
+
