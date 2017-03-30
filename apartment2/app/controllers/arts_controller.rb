@@ -22,7 +22,6 @@ class ArtsController < ApplicationController
        result["url"]
      end
 
-    end
   end
 
 
