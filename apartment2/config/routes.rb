@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   get "/profile/", to: "users#index", as: :user
 
-  get "/profile/gallery", to: "art#index", as: :arts
+  get "/profile/gallery", to: "arts#index", as: :arts
   post "/profile/gallery", to: "arts#create", as: :create_art
   get "profile/gallery/:id", to: "arts#show", as: :art
 
