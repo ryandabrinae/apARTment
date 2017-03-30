@@ -2,3 +2,11 @@
 <%= @art.year %>
 <img src= <%= @art.img_url %> />
 
+<%= form_for(@addToRoom) do |f| %>
+    <%= f.hidden_field :art, value: @art.id %>
+    <%= select_tag(:room, options_from_collection_for_select(current_user.rooms, 'id', 'name')
+    ) %>
+
+    <%= f.submit %>
+<% end %>
+
