@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   get "/profile", to: "users#profile", as: :arts
   get "/profile/", to: "users#index", as: :user
   get "/profile/", to: "arts#new", as: :new_art
-  # post "/profile/", to: "arts#create", as: :create_art
   post "/profile/", to: "search_arts#keyword", as: :create_art
 
 
@@ -17,10 +16,4 @@ Rails.application.routes.draw do
   get "profile/rooms/:id", to: "rooms#show", as: :room
 
 
-def index
-    # @user = User.find(params[:id])
-    @arts = Art.all
-
-    # @arts = @user.arts
-  end
 end

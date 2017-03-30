@@ -1,28 +1,21 @@
-config.gem "httparty"
-
-
-# puts response.title, response.maker, response.year, response.img_url
-
 class ArtsController < ApplicationController
 # renders all the art on the page
   def index
     @arts = Art.all
   end
 
-  def profile
-    # request to the API, brings the data back
-    @art = Art.new
-    @arts = HTTParty.get("https://www.rijksmuseum.nl/api/en/collection?key=RG3BxRnZ&format=json&q=#{params}&imgonly=true", :headers =>{'Content-Type' => 'application/json'})
-    @arts.to_json
-    # json = JSON.parse(response.body)
-    format.json { render :json => JSON.parse(@result) }
-    format.html { render "profile.html.erb" }
+  # def profile
+  #   # request to the API, brings the data back
+  #   @art = Art.new
+  #   @arts = HTTParty.get("https://www.rijksmuseum.nl/api/en/collection?key=RG3BxRnZ&format=json&q=#{params}&imgonly=true")
+  #   @arts.to_json
+  #   # json = JSON.parse(response.body)
+  #   # format.json { render :json => JSON.parse(@result) }
+  #   # format.html { render "profile.html.erb" }
 
-    results.each do |result|
-       result["url"]
-     end
 
-  end
+
+  # end
 
 
 
