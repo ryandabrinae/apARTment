@@ -20,6 +20,12 @@ class ArtsController < ApplicationController
       @addToRoom = ArtsRoom.new
   end
 
+   def destroy
+      # @turtle = Turtle.find(params[:id])
+      @art.destroy
+      redirect_to root_path
+    end
+
   private
 # what perameters are necessary for creating art
     def art_params
