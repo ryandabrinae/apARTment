@@ -1,0 +1,14 @@
+<p>
+  <% @rooms.each do |room| %>
+     <%= link_to room.name, room_path(room.id) %>
+  <% end%>
+</p>
+
+<p>
+<% @arts.each do |art| %>
+  <h1><%= link_to art.title, art_path(art)%></h1>
+  <p> By <%= art.maker %> </p>
+  <%= art.year %>
+  <img src= <%= art.img_url %> />
+  <% end %>
+</p>
