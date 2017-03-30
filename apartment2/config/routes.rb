@@ -5,9 +5,9 @@ Rails.application.routes.draw do
   root to: "users#index"
 
   # get "/profile", to: "users#profile", as: :arts
-  get "/profile/", to: "users#index", as: :user
+  # get "/profile/", to: "users#index", as: :user
   # get "/profile/", to: "arts#new", as: :new_art
-  post "/profile/", to: "arts#create", as: :create_art
+  # post "/profile/", to: "arts#create", as: :create_art
   get "/profile/rooms", to: "rooms#index", as: :rooms
   get "/profile/rooms/new", to: "rooms#new", as: :new_room
   post "/profile/rooms/", to: "rooms#create"
