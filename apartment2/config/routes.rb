@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get "/profile/rooms", to: "rooms#index", as: :rooms
   get "/profile/rooms/new", to: "rooms#new", as: :new_room
   post "/profile/rooms/", to: "rooms#create"
-  get "profile/rooms/:id", to: "rooms#show", as: :room\
+  get "profile/rooms/:id", to: "rooms#show", as: :room
 
   post "/profile/room-art", to: "roomsarts#create", as: :rooms_arts
   get "/profile/room-art/:id", to: "roomsarts#show", as: :rooms_art

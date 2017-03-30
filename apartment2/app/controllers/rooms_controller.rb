@@ -23,7 +23,7 @@ class RoomsController < ApplicationController
 
     def show
         @room = Room.find(params[:id])
-        @art = Roomsart.all
+        # @art = Roomsart.all
         @addToRoom = RoomsArt.new
     end
 
