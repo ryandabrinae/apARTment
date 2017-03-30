@@ -1,8 +1,7 @@
 config.gem "httparty"
 
-response =
 
-puts response.title, response.maker, response.year, response.img_url
+# puts response.title, response.maker, response.year, response.img_url
 
 class ArtsController < ApplicationController
 # renders all the art on the page
@@ -15,8 +14,17 @@ class ArtsController < ApplicationController
     @art = Art.new
     @arts = HTTParty.get("https://www.rijksmuseum.nl/api/en/collection?key=RG3BxRnZ&format=json&q=#{params}&imgonly=true", :headers =>{'Content-Type' => 'application/json'})
     @arts.to_json
-    json = JSON.parse(response.body)
+    # json = JSON.parse(response.body)
+    format.json { render :json => JSON.parse(@result) }
+    format.html { render "profile.html.erb" }
+
+    results.each do |result|
+       result["url"]
+     end
+
   end
+
+
 
   def create
     # create a new piece of art
