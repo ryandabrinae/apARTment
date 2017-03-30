@@ -9,6 +9,7 @@
   </head>
 
   <body>
+    <nav>
       <ul>
           <!-- <li><%= link_to "Home", root_path %></li> -->
           <% if current_user %>
@@ -21,15 +22,15 @@
               <li> <%= link_to "Login",  new_user_session_path %> </li>
           <% end %>
       </ul>
+    </nav>
+    <% if current_user %>
+      <p>Hello <%= current_user.email %></p>
+      <% else %>
+      <p>please sign in </p>
+      <% end %>
 
-  <% if current_user %>
-    <p>Hello <%= current_user.email %></p>
-    <% else %>
-    <p>please sign in </p>
-    <% end %>
-
-       <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
-    <%= yield %>
+         <p class="notice"><%= notice %></p>
+         <p class="alert"><%= alert %></p>
+      <%= yield %>
   </body>
 </html>
