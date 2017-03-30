@@ -15,8 +15,8 @@ Rails.application.routes.draw do
   post "/profile/rooms/", to: "rooms#create"
   get "profile/rooms/:id", to: "rooms#show", as: :room
 
-  post "/profile/room-art", to: "roomsarts#create", as: :rooms_arts
-  get "/profile/room-art/:id", to: "roomsarts#show", as: :rooms_art
+  post "/profile/room-art", to: "artsrooms#create", as: :arts_rooms
+  get "/profile/room-art/:id", to: "artsrooms#show", as: :arts_room
 
   get "/search", to: "search#index", as: :searches
   post "/search", to: "search#keyword", as: :search_keyword
