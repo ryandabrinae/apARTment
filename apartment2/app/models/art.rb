@@ -1,5 +1,4 @@
 class Art < ApplicationRecord
-
     validates :title, presence: true
     validates :user, presence: true
 
