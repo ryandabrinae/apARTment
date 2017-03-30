@@ -1,3 +1,5 @@
+<%= link_to "Add Art to Collection", searches_path %>
+
 <% @arts.each do |art| %>
   <h1><%= link_to art.title, art_path(art)%></h1>
   <p> By <%= art.maker %> </p>

@@ -15,6 +15,7 @@
           <% if current_user %>
               <!-- <li>Hello, <%= current_user.email %></li> -->
               <li><%= link_to "Home", user_path %></li>
+              <li><%= link_to "Search for Art", searches_path %></li>
               <li><%= link_to "My Rooms", rooms_path %></li>
               <li><%= link_to "My Gallery", arts_path %></li>
               <li><%= link_to 'Logout', destroy_user_session_path, :method => :delete %> </li>
