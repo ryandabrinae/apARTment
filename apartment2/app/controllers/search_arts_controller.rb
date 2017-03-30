@@ -6,7 +6,7 @@ class SearchArtsController < ApplicationController
     @arts = HTTParty.get("https://www.rijksmuseum.nl/api/en/collection?key=RG3BxRnZ&format=json&q=#{params[:art][:title]}&imgonly=true")
     puts @arts.to_json
     @art = Art.new
-    json = JSON.parse(response.body)
+    # json = JSON.parse(response.body)
   end
 end
 
