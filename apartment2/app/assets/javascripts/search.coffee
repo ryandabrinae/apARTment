@@ -17,8 +17,11 @@ $ ->
             $('body').append(pieceHolder)
     )
 
+    currentColor = "#5B245B"
+
     $(".color").click((e) ->
         $(".couch")
             .css
                 fill: $(e.target).attr 'value'
+        $("#furniture_color").attr 'value', $(e.target).attr 'value'
     )
