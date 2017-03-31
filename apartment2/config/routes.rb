@@ -19,6 +19,12 @@ Rails.application.routes.draw do
   delete "profile/rooms/:id", to: "rooms#destroy", as: :delete_room
   get "profile/rooms/:id/edit", to: "rooms#edit", as: :edit_room
 
+  get "profile/furnitures", to: "furnitures#index", as: :furnitures
+  get "profile/rooms/:room_id/furnitures", to: "furnitures#room_specific", as: :room_furniture
+  post "profile/furnitures", to: "furnitures#create", as: :create_furniture
+  get "profile/furnitures/:id", to: "furniture#show", as: :furniture
+  patch "profile/furnitures/:id", to: "furnitures#update"
+
   post "/profile/room-art", to: "artsrooms#create", as: :arts_rooms
   get "/profile/room-art/:id", to: "artsrooms#show", as: :arts_room
 

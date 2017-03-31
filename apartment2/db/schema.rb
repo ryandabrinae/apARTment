@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170330210947) do
+ActiveRecord::Schema.define(version: 20170331132304) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,11 +44,11 @@ ActiveRecord::Schema.define(version: 20170330210947) do
 
   create_table "furnitures", force: :cascade do |t|
     t.string   "color"
-    t.integer  "room_id"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
     t.string   "type_of_furniture"
-    t.index ["room_id"], name: "index_furnitures_on_room_id", using: :btree
+    t.integer  "arts_room_id"
+    t.index ["arts_room_id"], name: "index_furnitures_on_arts_room_id", using: :btree
   end
 
   create_table "places", force: :cascade do |t|
@@ -100,7 +100,7 @@ ActiveRecord::Schema.define(version: 20170330210947) do
 
   add_foreign_key "arts_rooms", "arts"
   add_foreign_key "arts_rooms", "rooms"
-  add_foreign_key "furnitures", "rooms"
+  add_foreign_key "furnitures", "arts_rooms"
   add_foreign_key "places", "users"
   add_foreign_key "places_rooms", "places"
   add_foreign_key "places_rooms", "rooms"
