@@ -1,4 +1,5 @@
 class ArtsroomsController < ApplicationController
+    before_action :authenticate_user!
     def show
         @arts_room = ArtsRoom.find(params[:id])
         if @arts_room.furniture 
