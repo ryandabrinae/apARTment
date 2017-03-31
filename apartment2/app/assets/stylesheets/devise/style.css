@@ -1,17 +1,20 @@
 .login-container {
-  background-color: #696d72;
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   width: 100vw;
   height: 100vh;
 }
-/*input {
-  width: 120px;
-  height: 35px;
-  border-radius: 10px;
-  border-style: none;
-}*/
+.boxlogo {
+  border-bottom-style: solid;
+  width: 450px;
+
+}
+.logo{
+
+}
 #user_email {
   width: 120px;
   height: 35px;
@@ -28,13 +31,14 @@
   margin-bottom: 10px;
 }
 .flex-outer {
-  height: 350px;
+  height: 250px;
   width: 450px;
-  background-color: #7b7e84;
+  background-color: lightgrey;
   border-radius: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 10px;
 }
 .heading {
   font-size: 36px;

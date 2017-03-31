@@ -1,0 +1,9 @@
+.profile-container {
+  width: 100vw;
+  height: 100vh;
+}
+.profile-header {
+  background-color: black;
+  height: 50px;
+  width: 100%;
+}
