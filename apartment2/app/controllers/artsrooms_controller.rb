@@ -2,9 +2,9 @@ class ArtsroomsController < ApplicationController
     before_action :authenticate_user!
     def show
         @arts_room = ArtsRoom.find(params[:id])
-        if @arts_room.furniture 
+        if @arts_room.furniture
             @furniture = @arts_room.furniture
-        else 
+        else
             @furniture = Furniture.new
         end
     end
@@ -16,7 +16,7 @@ class ArtsroomsController < ApplicationController
             @arts_room.room_id = params[:room]
         else
            @arts_room.art_id = params[:art]
-           @arts_room.room_id = params[:arts_room][:room] 
+           @arts_room.room_id = params[:arts_room][:room]
         end
 
         if @arts_room.save
