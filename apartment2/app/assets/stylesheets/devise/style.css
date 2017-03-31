@@ -1,0 +1,49 @@
+.login-container {
+  background-color: #696d72;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+/*input {
+  width: 120px;
+  height: 35px;
+  border-radius: 10px;
+  border-style: none;
+}*/
+#user_email {
+  width: 120px;
+  height: 35px;
+  border-radius: 10px;
+  border-style: none;
+}
+#user_password {
+  width: 120px;
+  height: 35px;
+  border-radius: 10px;
+  border-style: none;
+}
+#i1{
+  margin-bottom: 10px;
+}
+.flex-outer {
+  height: 350px;
+  width: 450px;
+  background-color: #7b7e84;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.heading {
+  font-size: 36px;
+  color: red;
+}
+.flex-content {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
