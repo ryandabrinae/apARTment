@@ -2,11 +2,35 @@ class ArtsroomsController < ApplicationController
     before_action :authenticate_user!
     def show
         @arts_room = ArtsRoom.find(params[:id])
-        if @arts_room.furniture 
-            @furniture = @arts_room.furniture
+        if @arts_room.furnitures.exists?
+            @furnitures = @arts_room.furnitures 
+
+            @furnitures.each do |furniture| 
+                if @furnitures.where(type_of_furniture: "couch")
+                    @couch = @furnitures.where(type_of_furniture: "couch").first
+                elsif @furnitures.where(type_of_furniture: "bed")
+                    @bed = @furnitures.where(type_of_furniture: "bed").first
+                end
+            end
+
+            if @couch && !@bed
+                @bed = Furniture.new
+                @bed.type_of_furniture = "bed"
+            elsif !@couch && @bed
+                @couch = Furniture.new
+                @couch.type_of_furniture = "couch"
+            elsif !@couch && !@bed
+                @couch = Furniture.new
+                @couch.type_of_furniture = "couch"
+                @bed = Furniture.new
+                @bed.type_of_furniture = "bed"
+            end      
         else 
-            @furniture = Furniture.new
-        end
+            @couch = Furniture.new
+            @couch.type_of_furniture = "couch"
+            @bed = Furniture.new
+            @bed.type_of_furniture = "bed" 
+        end # Ends if furnitures exist clause
     end
 
     def create
