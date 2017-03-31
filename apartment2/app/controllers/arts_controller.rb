@@ -1,5 +1,6 @@
 class ArtsController < ApplicationController
 # renders all the art on the page
+before_action :authenticate_user!
 
   def index
     @arts = Art.all

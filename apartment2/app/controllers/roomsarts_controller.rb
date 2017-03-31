@@ -1,4 +1,5 @@
 class RoomsartsController < ApplicationController
+    before_action :authenticate_user!
     def show
         @roomsart = RoomsArt.find(params[:id])
     end

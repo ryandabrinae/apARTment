@@ -1,6 +1,11 @@
-class FurnituressController < ApplicationController
+class FurnituresController < ApplicationController
+    before_action :authenticate_user!
     def index
-        @furnitures = Furniture.room_furniture(current_room.id)
+        redirect_to :rooms
+    end
+
+    def room_specific
+        @furnitures = Furniture.room_furniture(params[:room_id])
     end
 
     def new
@@ -8,25 +13,31 @@ class FurnituressController < ApplicationController
     end
 
     def create
-        @furniture = Furnitre.new(furniture_params)
-        @furniture.type_of_furniture = params[:type_of_furniture]
+        @furniture = Furniture.new(furniture_params)
 
         if @furniture.save
-            redirect_to @furniture
+            redirect_to :back
         else
             puts @furniture
             redirect_to :back
         end
+    end
 
-
+    def update
+        @furniture = Furniture.find(params[:id])
+        if @furniture.update(furniture_params)
+            redirect_to :back
+        else
+            redirect_to :back
+        end
     end
 
     def show
-        @furniture = Furniture.find(params[:id])
+        redirect_to :rooms
     end
 
     private
     def furniture_params
-        params.require(:furniture).permit(:color, :created_at, :updated_at, :type_of_furniture, :room_id)
+        params.require(:furniture).permit(:color, :arts_room_id, :type_of_furniture)
     end
 end

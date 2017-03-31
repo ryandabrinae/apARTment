@@ -1,5 +1,6 @@
 require "httparty"
 class SearchArtsController < ApplicationController
+  before_action :authenticate_user!
 
   def keyword
     # searches the database for art
