@@ -31,7 +31,7 @@
 <style type="text/css">
 <%# SVG fill defaults to the first colour. if the first colour does not exist, then it will default to purple%>
 	.couch{
-    fill: <%= @furnitures ? @couch["color"] : (@arts_room.art["color1"] ? "#{@arts_room.art["color1"]}" : "#5B245B") %> ;
+    fill: <%= @couch? ? @couch["color"] : (@arts_room.art["color1"] ? "#{@arts_room.art["color1"]}" : "#5B245B") %> ;
   }
 </style>
 <defs>
