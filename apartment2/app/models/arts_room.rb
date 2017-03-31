@@ -1,5 +1,5 @@
 class ArtsRoom < ApplicationRecord
   belongs_to :room
   belongs_to :art
-  has_many :furnitures, :dependent => :destroy
+  has_one :furniture, :dependent => :destroy
 end

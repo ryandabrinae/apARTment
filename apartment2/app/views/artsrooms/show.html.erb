@@ -31,7 +31,8 @@
 <style type="text/css">
 <%# SVG fill defaults to the first colour. if the first colour does not exist, then it will default to purple%>
 	.couch{
-    fill: <%= @couch ? @couch["color"] : (@arts_room.art["color1"] ? "#{@arts_room.art["color1"]}" : "#5B245B") %> ;
+
+    fill: <%= @furniture["color"] ? @furniture["color"] : @arts_room.art["color1"] ? @arts_room.art["color1"] : "#5B245B" %> ;
   }
 
 </style>
@@ -386,7 +387,7 @@
 
 
 
-<%= form_for(@couch) do |f| %>
+<%= form_for(@furniture) do |f| %>
   <%= f.hidden_field :color %>
   <%= f.hidden_field :arts_room_id, value: @arts_room.id %>
   <%= f.hidden_field :type_of_furniture%>
