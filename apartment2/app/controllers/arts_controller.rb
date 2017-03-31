@@ -1,5 +1,6 @@
 class ArtsController < ApplicationController
 # renders all the art on the page
+
   def index
     @arts = Art.all
   end
@@ -17,8 +18,14 @@ class ArtsController < ApplicationController
 
   def show
       @art = Art.where(id: params[:id], user_id: current_user.id).first
-      @addToRoom = RoomsArt.new
+      @addToRoom = ArtsRoom.new
   end
+
+   def destroy
+      @art = Art.find(params[:id])
+      @art.destroy
+      redirect_to root_path
+    end
 
   private
 # what perameters are necessary for creating art

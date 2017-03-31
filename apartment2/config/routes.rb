@@ -9,14 +9,18 @@ Rails.application.routes.draw do
   get "/profile/gallery", to: "arts#index", as: :arts
   post "/profile/gallery", to: "arts#create", as: :create_art
   get "profile/gallery/:id", to: "arts#show", as: :art
+  # delete "profile/gallery/:id", to: "arts#destroy"
 
   get "/profile/rooms", to: "rooms#index", as: :rooms
   get "/profile/rooms/new", to: "rooms#new", as: :new_room
   post "/profile/rooms/", to: "rooms#create"
-  get "profile/rooms/:id", to: "rooms#show", as: :room\
+  get "profile/rooms/:id", to: "rooms#show", as: :room
+  patch "profile/rooms/:id", to: "rooms#update"
+  delete "profile/rooms/:id", to: "rooms#destroy", as: :delete_room
+  get "profile/rooms/:id/edit", to: "rooms#edit", as: :edit_room
 
-  post "/profile/room-art", to: "roomsarts#create", as: :rooms_arts
-  get "/profile/room-art/:id", to: "roomsarts#show", as: :rooms_art
+  post "/profile/room-art", to: "artsrooms#create", as: :arts_rooms
+  get "/profile/room-art/:id", to: "artsrooms#show", as: :arts_room
 
   get "/search", to: "search#index", as: :searches
   post "/search", to: "search#keyword", as: :search_keyword

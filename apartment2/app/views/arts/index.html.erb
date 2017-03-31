@@ -1,8 +1,12 @@
 <%= link_to "Add Art to Collection", searches_path %>
 
+<p>
 <% @arts.each do |art| %>
   <h1><%= link_to art.title, art_path(art)%></h1>
   <p> By <%= art.maker %> </p>
   <%= art.year %>
   <img src= <%= art.img_url %> />
+</p>
+
+
 <% end %>

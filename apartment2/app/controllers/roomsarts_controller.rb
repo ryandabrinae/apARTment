@@ -5,9 +5,13 @@ class RoomsartsController < ApplicationController
 
     def create
         @roomsart = RoomsArt.new
-        @roomsart.art_id = params[:rooms_art][:art]
-        room_id = params[:room]
-        @roomsart.room_id = room_id
+        if(params[:rooms_art][:art])
+            @roomsart.art_id = params[:rooms_art][:art]
+            @roomsart.room_id = params[:room]
+        else
+           @roomsart.art_id = params[:art]
+           @roomsart.room_id = params[:rooms_art][:room]
+        end
 
         if @roomsart.save
             redirect_to @roomsart
@@ -16,7 +20,7 @@ class RoomsartsController < ApplicationController
         end
     end
 
-    private 
+    private
     def set_params
     end
 end
