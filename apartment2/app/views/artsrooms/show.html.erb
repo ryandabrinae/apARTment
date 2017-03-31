@@ -24,35 +24,32 @@
   <% end %>
 </div>
 
-<div class="select-holder">
-</div>
 
 
-<style>
-	.hidden {
-		display: none;
-	}
-</style>
 
-<%=
-  inline_svg('couch2.svg',
-    class: 'couch2'
-    )
-%>
-=======
+
 <div id="couch1" class="couch hidden">
-	
 
 </div>
+
 
 <div id="couch2" class="couch hidden">
-
-   
+	<%=
+	  inline_svg('couch2.svg',
+	    class: 'couch2'
+	    )
+	%>
 </div>
 
 <div id="couch3" class="couch hidden">
-	
+	<%=
+	  inline_svg('couch3.svg',
+	    class: 'couch2'
+	    )
+	%>
 </div>
+
+
 
 
 <%= form_for(@furniture) do |f| %>
