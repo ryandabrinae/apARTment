@@ -386,7 +386,11 @@
 </g>
 </svg>
 
-
+<%=
+  inline_svg('couch2.svg',
+    class: 'couch2'
+    )
+%>
 
 <%= form_for(@furniture) do |f| %>
   <%= f.hidden_field :color %>
