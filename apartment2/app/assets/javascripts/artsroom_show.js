@@ -4,8 +4,15 @@ $(document).ready(() => {
 
 		// fill: <%= @furniture["color"] ? @furniture["color"] : @arts_room.art["color1"] ? @arts_room.art["color1"] : "#5B245B" %> ;
     $(".color").click((e) => {
-        for(i = 0 ; i < 4 ; i ++){
-            $(".couch"+i+"-fill").css("fill", $(e.target).attr("value"));
+        roomType = $("h1").attr("name");
+        if(roomType === "Living Room"){
+            for(i = 0 ; i < 4 ; i ++){
+                $(".couch"+i+"-fill").css("fill", $(e.target).attr("value"));
+            }
+        } else {
+            for(i = 0 ; i < 4 ; i ++){
+                $(".bed"+i+"-fill").css("fill", $(e.target).attr("value"));
+            }
         }
         $("#furniture_color").attr("value", $(e.target).attr("value"));
     });
@@ -22,8 +29,8 @@ $(document).ready(() => {
 
     const createSelector = () => {
         roomType = $("h1").attr("name");
+        select = $("<select>").addClass("furniture-selector");
         if(roomType === "Living Room"){
-            select = $("<select>").addClass("furniture-selector");
             defaultOption = $("<option>").attr("disabled","disabled").attr("selected", "selected").text("Select a Couch");
             select.append(defaultOption);
             for(i = 1 ; i < 4 ; i++){
@@ -32,8 +39,17 @@ $(document).ready(() => {
                 option.text("Couch" + i);
                 select.append(option);
             }
-            $(".select-holder").append(select);
+        } else {
+            defaultOption = $("<option>").attr("disabled","disabled").attr("selected", "selected").text("Select a Bed");
+            select.append(defaultOption);
+            for(i = 1 ; i < 4 ; i++){
+                option = $("<option>").attr("name", "bed" + i);
+                option.attr("value", "bed" + i);
+                option.text("Bed" + i);
+                select.append(option);
+            }
         }
+        $(".select-holder").append(select);
     }
 
     createSelector();
@@ -43,7 +59,7 @@ $(document).ready(() => {
         .change(() => {
             $(".furniture-selector option:selected").each(function(){
                 selection = $(this).attr("value");
-                $(".couch").addClass("hidden");
+                $(".furniture").addClass("hidden");
                 $("#" + selection).removeClass("hidden");
                 $("#furniture_type_number").attr("value", selection);
             });
