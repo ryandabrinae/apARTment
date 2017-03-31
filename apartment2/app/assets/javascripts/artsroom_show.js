@@ -1,10 +1,24 @@
 $(document).ready(() => {
     
-    
+    // .couch{
+
+		// fill: <%= @furniture["color"] ? @furniture["color"] : @arts_room.art["color1"] ? @arts_room.art["color1"] : "#5B245B" %> ;
     $(".color").click((e) => {
-        $(".couch").css("fill", $(e.target).attr("value"));
+        for(i = 0 ; i < 4 ; i ++){
+            $(".couch"+i+"-fill").css("fill", $(e.target).attr("value"));
+        }
         $("#furniture_color").attr("value", $(e.target).attr("value"));
     });
+
+    const furnitureMatch = () => {
+        if ($("#type_of_furniture")){
+            furnitureType = $("#furniture_type_number").attr("value");
+            $("#"+furnitureType).removeClass("hidden");
+            $("."+furnitureType+"-fill").css("fill", $("#furniture_color").attr("value"));
+        }
+    }
+
+    furnitureMatch();
 
     const createSelector = () => {
         roomType = $("h1").attr("name");
@@ -31,6 +45,7 @@ $(document).ready(() => {
                 selection = $(this).attr("value");
                 $(".couch").addClass("hidden");
                 $("#" + selection).removeClass("hidden");
+                $("#furniture_type_number").attr("value", selection);
             });
         });
     }

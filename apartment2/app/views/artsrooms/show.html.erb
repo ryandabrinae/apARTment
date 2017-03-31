@@ -24,12 +24,22 @@
   <% end %>
 </div>
 
+<div class="select-holder">
+</div>
 
 
+<style>
+	.hidden {
+		display: none;
+	}
+</style>
 
 
 <div id="couch1" class="couch hidden">
-
+	<%= inline_svg('couch1.svg',
+		class: 'couch1'
+		)
+	%>
 </div>
 
 
@@ -56,6 +66,7 @@
   <%= f.hidden_field :color %>
   <%= f.hidden_field :arts_room_id, value: @arts_room.id %>
   <%= f.hidden_field :type_of_furniture%>
+  <%= f.hidden_field :type_number %>
 
   <%= f.submit %>
 <% end %>
