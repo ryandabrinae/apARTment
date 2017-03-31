@@ -16,3 +16,9 @@ $ ->
             pieceHolder.append(title, image)
             $('body').append(pieceHolder)
     )
+
+    $(".color").click((e) ->
+        $(".couch")
+            .css
+                fill: $(e.target).attr 'value'
+    )
