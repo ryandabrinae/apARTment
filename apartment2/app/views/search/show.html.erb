@@ -1,4 +1,7 @@
 <%= render "shared/navbar" %>
+
+<div class = "searchArt">
+
 <%= @response["artObject"]["title"] %>
 
 <img src=<%= @response["artObject"]["webImage"]["url"]%> />
@@ -17,3 +20,4 @@
     <%= f.submit %>
 
 <% end %>
+</div>
