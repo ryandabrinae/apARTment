@@ -38,6 +38,6 @@ class FurnituresController < ApplicationController
 
     private
     def furniture_params
-        params.require(:furniture).permit(:color, :arts_room_id, :type_of_furniture)
+        params.require(:furniture).permit(:color, :arts_room_id, :type_of_furniture, :type_number)
     end
 end

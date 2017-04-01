@@ -26,7 +26,7 @@ class RoomsController < ApplicationController
         @addToRoom = ArtsRoom.new
     end
 
-    def edit 
+    def edit
         @room = Room.find(params[:id])
     end
 
@@ -45,10 +45,10 @@ class RoomsController < ApplicationController
 
     def destroy
         @room = Room.find(params[:id])
-        
-        if @room.delete
+
+        if @room.destroy
             redirect_to rooms_path
-        else 
+        else
             redirect_to @room
         end
     end
