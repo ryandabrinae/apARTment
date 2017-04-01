@@ -1,0 +1,49 @@
+body{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: 'Muli', sans-serif;
+}
+
+.artSearch{
+  display: flex;
+  flex-direction: column;
+  /*padding-left: 20vh;*/
+  align-self: center;
+  /*height: 100vh;*/
+}
+
+#keyword{
+  width: 40vh;
+  height: 5vh;
+   border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid black;
+  margin-bottom: 6vh;
+}
+
+.artList{
+  margin-top: 6vh;
+
+}
+
+.artList a {
+  font-size: 15px;
+  width: 10vh;
+  word-wrap:break-word;
+  text-decoration: none;
+  color: black;
+}
+
+.artList h3 {
+  /*font-size: 15px;*/
+  width: 40vh;
+  word-wrap:break-word;
+}
+
+
+.artList img{
+  width: 50vh;
+  height: 50vh;
+}
