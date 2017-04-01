@@ -100,3 +100,15 @@ body{
   text-decoration: none;
   color: black;
 }
+
+.deleteRoomButton{
+  border: none;
+  background-color: white;
+  font-size: 15px;
+}
+
+.addRoomButton{
+  border: none;
+  background-color: white;
+  font-size: 15px;
+}
