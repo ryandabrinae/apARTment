@@ -1,97 +1,82 @@
 <h1 name="<%= @arts_room.room.type_of_room %>" ><%= @arts_room.room.name %></h1>
 
 <h2><%= @arts_room.art.title %></h2>
-<p>
-  <img src=<%= @arts_room.art.img_url %> />
-</p>
 
 
-<style type="text/css">
-  .palette {display: flex;}
-  .color {
-    margin: 10px;
-    height: 30px;
-    width: 30px;
-  }
-</style>
-<div class="palette">
-  <% index = [1, 2, 3, 4, 5, 6] %>
-  <% index.each do |i| %>
-    <% if @arts_room.art["color#{i}"] %>
-      <div class="color" id=<%= "color#{i}" %> style="background-color: <%= "#{@arts_room.art["color#{i}"]}" %>" value=<%= "#{@arts_room.art["color#{i}"]}"%> >
-      </div>
-    <% end %>
-  <% end %>
+<div class="room">
+	<div class="palette">
+		<h3> Click Palette To Change Furniture Color </h2>
+		<div class="colors">
+			<% index = [1, 2, 3, 4, 5, 6] %>
+			<% index.each do |i| %>
+				<% if @arts_room.art["color#{i}"] %>
+					<div class="color" id=<%= "color#{i}" %> style="background-color: <%= "#{@arts_room.art["color#{i}"]}" %>" value=<%= "#{@arts_room.art["color#{i}"]}"%> >
+					</div>
+				<% end %>
+			<% end %>
+		</div>
+		<div class="options">
+		<div class="select-holder">
+			</div>
+			<%= form_for(@furniture) do |f| %>
+				<%= f.hidden_field :color %>
+				<%= f.hidden_field :arts_room_id, value: @arts_room.id %>
+				<%= f.hidden_field :type_of_furniture%>
+				<%= f.hidden_field :type_number %>
+
+				<%= f.submit %>
+			<% end %>
+		</div>
+	</div>
+	<div class="frame">
+		<img class="art" src=<%= @arts_room.art.img_url %> />
+	</div>
+
+	<div id="couch1" class="furniture couch hidden">
+		<%= inline_svg('couch1.svg',
+			class: 'couch1'
+			)
+		%>
+	</div>
+
+
+	<div id="couch2" class="furniture couch hidden">
+		<%=
+			inline_svg('couch2.svg',
+				class: 'couch2'
+				)
+		%>
+	</div>
+
+	<div id="couch3" class="furniture couch hidden">
+		<%=
+			inline_svg('couch3.svg',
+				class: 'couch2'
+				)
+		%>
+		
+	</div>
+
+
+	<div id="bed1" class="furniture bed hidden">
+		<%=
+			inline_svg('bed1.svg',
+				class: 'bed1'
+				)
+		%>
+	</div>
+	<div id="bed2" class="furniture bed hidden">
+		<%=
+			inline_svg('bed2.svg',
+				class: 'bed2'
+				)
+		%>
+	</div>
+	<div id="bed3" class="furniture bed hidden">
+		<%=
+			inline_svg('bed3.svg',
+				class: 'bed3'
+				)
+		%>
+	</div>
 </div>
-
-<div class="select-holder">
-</div>
-
-
-<style>
-	.hidden {
-		display: none;
-	}
-</style>
-
-
-<div id="couch1" class="furniture couch hidden">
-	<%= inline_svg('couch1.svg',
-		class: 'couch1'
-		)
-	%>
-</div>
-
-
-<div id="couch2" class="furniture couch hidden">
-	<%=
-	  inline_svg('couch2.svg',
-	    class: 'couch2'
-	    )
-	%>
-</div>
-
-<div id="couch3" class="furniture couch hidden">
-	<%=
-	  inline_svg('couch3.svg',
-	    class: 'couch2'
-	    )
-	%>
-	
-</div>
-
-
-<div id="bed1" class="furniture bed hidden">
-	<%=
-	  inline_svg('bed1.svg',
-	    class: 'bed1'
-	    )
-	%>
-</div>
-<div id="bed2" class="furniture bed hidden">
-	<%=
-	  inline_svg('bed2.svg',
-	    class: 'bed2'
-	    )
-	%>
-</div>
-<div id="bed3" class="furniture bed hidden">
-	<%=
-	  inline_svg('bed3.svg',
-	    class: 'bed3'
-	    )
-	%>
-</div>
-
-
-
-<%= form_for(@furniture) do |f| %>
-  <%= f.hidden_field :color %>
-  <%= f.hidden_field :arts_room_id, value: @arts_room.id %>
-  <%= f.hidden_field :type_of_furniture%>
-  <%= f.hidden_field :type_number %>
-
-  <%= f.submit %>
-<% end %>
-
-<div class="hello"> </div>
