@@ -1,0 +1,40 @@
+.gallery {
+    height: 90vh;
+    display: flex;
+    width: 90vw;
+    overflow: scroll;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.gallery-art {
+    display: flex; 
+    width: 500px;
+    height: 300px;
+    flex-direction: row;
+}
+
+.gallery-artsrooms {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.show-art {
+    align-items: center;
+    margin: 0 auto;
+    display: flex;
+    width: 80vw;
+    height: 90vh;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.show-image {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+
