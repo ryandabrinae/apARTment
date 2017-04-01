@@ -21,10 +21,12 @@
 <div class="profile-roomside">
 
     <% @rooms.each do |room| %>
-    <div class="roomdiv">
-    <iframe href= <%= room_path(room.id)%>></iframe>
-    <%= link_to room.name, room_path(room.id) %>
-    </div>
+      <% room.arts_rooms.each do |artsroom| %>
+        <div class="roomdiv">
+        <iframe href= <%= arts_room_path(artsroom.id) %>></iframe>
+        <%= link_to "#{artsroom.room.name} - #{artsroom.art.title}", arts_room_path(artsroom.id) %>
+        </div>
+      <% end %>
     <% end%>
 
     <div class="links">
