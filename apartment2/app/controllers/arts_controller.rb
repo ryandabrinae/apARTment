@@ -3,6 +3,7 @@ class ArtsController < ApplicationController
 before_action :authenticate_user!
 
   def index
+    @addToRoom = ArtsRoom.new
     @arts = Art.all
   end
 
