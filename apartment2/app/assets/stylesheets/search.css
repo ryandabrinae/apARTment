@@ -112,3 +112,20 @@ body{
   background-color: white;
   font-size: 15px;
 }
+
+.artsIndex{
+height: 100vh;
+display: flex;
+flex-direction: column;
+}
+
+.artsIndex img{
+  width: 50vh;
+  height: 50vh;
+}
+
+.artsIndex a{
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
