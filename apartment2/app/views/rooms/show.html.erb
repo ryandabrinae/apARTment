@@ -1,11 +1,10 @@
-<<<<<<< HEAD
+
 <%= render "shared/navbar" %>
 
-<h1> <%= @room.name %> </h1>
-=======
+
 <div class = "showRoomName">
   <h1> <%= @room.name %> </h1>
->>>>>>> fe48620fd29edc1a46bf71c16a254763b2cb57f9
+
 
 <p> Paintings:
   <ul>
@@ -26,12 +25,6 @@
       <%= f.submit %>
   <% end %>
 
-<<<<<<< HEAD
-    <%= f.submit %>
-<% end %>
-
-<%= button_to "Delete", delete_room_path, {method: :delete} %>
-=======
   <%= button_to "Delete", delete_room_path, {method: :delete, class: "deleteRoomButton"}%>
 </div>
->>>>>>> fe48620fd29edc1a46bf71c16a254763b2cb57f9
+
