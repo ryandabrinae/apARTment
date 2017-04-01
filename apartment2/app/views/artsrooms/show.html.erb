@@ -1,3 +1,7 @@
+<% content_for :head do %>
+	<%= javascript_include_tag "artsroom_show"%>
+<% end %>
+
 <h1 name="<%= @arts_room.room.type_of_room %>" ><%= @arts_room.room.name %></h1>
 
 <h2><%= @arts_room.art.title %></h2>
