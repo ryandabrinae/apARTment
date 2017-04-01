@@ -32,7 +32,7 @@ body{
   word-wrap:break-word;
   text-decoration: none;
   color: black;
-  border-bottom: 2px solid red;
+  /*border-bottom: 2px solid red;*/
 }
 
 .artList h3 {
@@ -60,18 +60,42 @@ body{
 .createRoom a{
   text-decoration: none;
   color: black;
-  border-bottom: 2px solid red;
+  /*border-bottom: 2px solid red;*/
   width: 22vh;
 }
 .roomLink a{
 
   text-decoration: none;
   color: black;
-  border-bottom: 2px solid red;
+  /*border-bottom: 2px solid red;*/
 }
 
 .roomLink{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+
+
+.showRoomName{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.showRoomName h1{
+  align-self: center;
+}
+
+.showRoomName #art{
+  width: 40%;
+}
+
+.showRoomName li{
+  list-style-type: none;
+}
+
+.showRoomName a {
+  text-decoration: none;
+  color: black;
 }
