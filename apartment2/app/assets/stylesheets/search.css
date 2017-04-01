@@ -78,6 +78,9 @@ body{
   justify-content: space-around;
 }
 
+search{
+   outline: none;
+}
 
 .showRoomName{
   height: 100vh;
@@ -109,6 +112,7 @@ body{
   font-size: 15px;
   /*display: flex;*/
   align-self: center;
+   outline: none;
 }
 
 .artsIndex{
@@ -147,6 +151,7 @@ body{
    border: none;
   background-color: white;
   font-size: 15px;
+   outline: none;
 }
 
 .new_arts_room{
@@ -154,4 +159,12 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+   outline: none;
+}
+
+.searchArt input{
+   border: none;
+  background-color: white;
+  font-size: 15px;
+   outline: none;
 }
