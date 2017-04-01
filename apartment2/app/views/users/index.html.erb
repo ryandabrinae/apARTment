@@ -6,7 +6,9 @@
     <% @arts.each do |art| %>
       <div class="flex-art">
       <h1><%= link_to art.title, art_path(art)%></h1>
-      <img class= "profiles-img" src= <%= art.img_url %>></img>
+      <div class= "art-box">
+        <img class= "profiles-img" src= <%= art.img_url %>></img>
+      </div>
       <div class="art-content">
       <p> By <%= art.maker %> </p>
       <p> Year:<%= art.year %></p>
@@ -22,13 +24,10 @@
     <% @rooms.each do |room| %>
     <div class="roomdiv">
     <iframe href= <%= room_path(room.id)%>></iframe>
-
+    <%= link_to room.name, room_path(room.id) %>
+    </div>
     <% end%>
 
-      <% @rooms.each do |room| %>
-        <%= link_to room.name, room_path(room.id) %>
-        <%end%>
-    </div>
     <div class="links">
     <%= link_to "+", new_room_path %>
     </div>

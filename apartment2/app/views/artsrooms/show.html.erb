@@ -1,3 +1,5 @@
+<%= render "shared/navbar" %>
+
 <h1><%= @arts_room.room.name %></h1>
 
 <h2><%= @arts_room.art.title %></h2>
@@ -18,7 +20,7 @@
   <% index = [1, 2, 3, 4, 5, 6] %>
   <% index.each do |i| %>
     <% if @arts_room.art["color#{i}"] %>
-      <div class="color" id=<%= "color#{i}" %> style="background-color: <%= "#{@arts_room.art["color#{i}"]}" %>" value=<%= "#{@arts_room.art["color#{i}"]}"%> > 
+      <div class="color" id=<%= "color#{i}" %> style="background-color: <%= "#{@arts_room.art["color#{i}"]}" %>" value=<%= "#{@arts_room.art["color#{i}"]}"%> >
       </div>
     <% end %>
   <% end %>
@@ -387,7 +389,7 @@
 
 <%= form_for(@furniture) do |f| %>
   <%= f.hidden_field :color %>
-  <%= f.hidden_field :arts_room_id, value: @arts_room.id %>  
+  <%= f.hidden_field :arts_room_id, value: @arts_room.id %>
   <%= f.hidden_field :type_of_furniture, value: "couch" %>
 
   <%= f.submit %>

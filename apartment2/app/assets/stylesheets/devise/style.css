@@ -13,10 +13,12 @@
   margin-bottom: 10px;
 }
 #user_email:hover {
-    background-color: yellow;
+    background-color: black;
+    color: white;
 }
 #user_password:hover {
-    background-color: yellow;
+    background-color: black;
+    color: white;
 }
 #user_email {
   height: 35px;
