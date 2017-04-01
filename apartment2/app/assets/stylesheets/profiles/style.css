@@ -44,14 +44,15 @@
 }
 
 .navh:hover{
-color: black;
+/*color: grey;*/
 text-align: center;
-background-color: black;
+/*background-color: black;*/
 text-decoration: none;
 }
 
 div.navh a:hover{
-  /*color: white;*/
+  color: #ababab;
+  font-weight: bold;
   text-decoration: none;
 }
 .navflex {

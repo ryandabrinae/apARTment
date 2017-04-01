@@ -7,6 +7,8 @@
 
 
 <p> Paintings:
+<br>
+<br>
   <ul>
   <% @room.arts_rooms.each do |arts_room| %>
       <li> <%= link_to arts_room.art.title, arts_room_path(arts_room.id) %> </li>
@@ -14,17 +16,17 @@
   </ul>
 </p>
 
-
+<div class = "newArtsRoom">
   <%= form_for(@addToRoom) do |f| %>
       <%= f.hidden_field :room, value: @room.id %>
       <%# select tags are made from a collection accessed through arts here, with the id of the arts as the value%>
       <%# The name is defined by the method madeBy defined in the model %>
       <%= select_tag(:art, options_from_collection_for_select(current_user.arts, 'id', "madeBy")
       ) %>
-
+    <br>
       <%= f.submit %>
   <% end %>
 
   <%= button_to "Delete", delete_room_path, {method: :delete, class: "deleteRoomButton"}%>
 </div>
-
+</div>
