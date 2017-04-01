@@ -13,12 +13,19 @@
   margin-bottom: 10px;
 }
 #user_email:hover {
+<<<<<<< HEAD
+    background-color: yellow;
+}
+#user_password:hover {
+    background-color: yellow;
+=======
     background-color: black;
     color: white;
 }
 #user_password:hover {
     background-color: black;
     color: white;
+>>>>>>> 2a5ee2311140397b57a4c3f789478751e11d787c
 }
 #user_email {
   height: 35px;

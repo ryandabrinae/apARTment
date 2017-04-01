@@ -1,3 +1,37 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<div class="search-container">
+<div class="header">
+
+</div>
+
+
+
+<div class="body"
+<%= form_tag search_keyword_path, class: "search", remote: true do %>
+    <%= label_tag :keyword %>
+=======
+
+<div class="artSearch"><%= form_tag search_keyword_path, class: "search", remote: true do %>
+    <!-- <%= label_tag :keyword %> -->
+>>>>>>> b8e3ad2938f2cf9ecbf67860b781f766c63a8e4e
+    <%# nil is here in order to not set the value of the bar %>
+    <%= text_field_tag :keyword, nil, placeholder: "Search for art by any keyword" %>
+
+<<<<<<< HEAD
+    <%= submit_tag "Submit Search" %>
+<% end %>
+
+</div>
+
+<div class="footer">
+
+</div>
+=======
+    <!-- <%= submit_tag "Submit Search" %> -->
+<% end %>
+>>>>>>> b8e3ad2938f2cf9ecbf67860b781f766c63a8e4e
+=======
 <% content_for :head do %>
     <%= javascript_include_tag "search" %>
 <% end %>
@@ -11,4 +45,5 @@
 
         <div class="search-results"></div>
     </div>
+>>>>>>> 2a5ee2311140397b57a4c3f789478751e11d787c
 </div>
