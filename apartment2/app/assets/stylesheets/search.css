@@ -1,0 +1,114 @@
+body{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: 'Muli', sans-serif;
+}
+
+.artSearch{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+#keyword{
+  width: 40vh;
+  height: 5vh;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid black;
+  margin-bottom: 6vh;
+  font-size: 20px;
+}
+
+.artList{
+  margin-top: 6vh;
+}
+
+.artList a {
+  font-size: 15px;
+  width: 10vh;
+  word-wrap:break-word;
+  text-decoration: none;
+  color: black;
+  /*border-bottom: 2px solid red;*/
+}
+
+.artList h3 {
+  width: 40vh;
+  word-wrap:break-word;
+}
+
+
+.artList img{
+  width: 50vh;
+  height: 50vh;
+}
+
+
+.roomsLinksContainer{
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.createRoom{
+  align-self: center;
+}
+
+.createRoom a{
+  text-decoration: none;
+  color: black;
+  /*border-bottom: 2px solid red;*/
+  width: 22vh;
+}
+.roomLink a{
+
+  text-decoration: none;
+  color: black;
+  /*border-bottom: 2px solid red;*/
+}
+
+.roomLink{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+
+.showRoomName{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.showRoomName h1{
+  align-self: center;
+}
+
+.showRoomName #art{
+  width: 40%;
+}
+
+.showRoomName li{
+  list-style-type: none;
+}
+
+.showRoomName a {
+  text-decoration: none;
+  color: black;
+}
+
+.deleteRoomButton{
+  border: none;
+  background-color: white;
+  font-size: 15px;
+}
+
+.addRoomButton{
+  border: none;
+  background-color: white;
+  font-size: 15px;
+}

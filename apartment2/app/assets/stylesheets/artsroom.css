@@ -1,0 +1,65 @@
+.room {
+    align-items: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100vh;
+    margin: 0 auto;
+    min-height: 700px;
+}
+
+.bedroom {
+    background: white center/cover url('bedroom.svg');
+}
+
+.living {
+    background: white center/cover url("living.svg");
+}
+
+.palette {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 25vh;
+}
+
+.colors {
+    margin-top: -10px;
+    border: 1px solid black;
+    margin-bottom: 15px;
+}
+
+.color {
+    display: inline-block;
+    margin: 6px;
+    height: 30px;
+    width: 30px;
+}
+
+.options {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.furniture {
+    position: absolute;
+    margin: 0 auto;
+    top: 53vh;
+    left: 34.5vw;
+    width: 370px;
+}
+
+.frame {
+    width: 10%;
+}
+
+.art {
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
