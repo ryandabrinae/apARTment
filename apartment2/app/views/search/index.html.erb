@@ -1,6 +1,6 @@
 
 <div class="artSearch"><%= form_tag search_keyword_path, class: "search", remote: true do %>
-    <%= label_tag :keyword %>
+    <!-- <%= label_tag :keyword %> -->
     <%# nil is here in order to not set the value of the bar %>
     <%= text_field_tag :keyword, nil, placeholder: "Search for art by any keyword" %>
 
