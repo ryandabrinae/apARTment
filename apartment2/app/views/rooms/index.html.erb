@@ -3,12 +3,19 @@
 <div class = "roomsLinksContainer">
 
   <div class = "createRoom">
+
     <%= link_to "Create a new room", new_room_path %>
   </div>
 
-  <p class = "roomLink">
+<div class="flexroom">
     <% @rooms.each do |room| %>
+
+    <% room.arts_rooms.each do |artsroom| %>
+    <div class = "roomLink">
        <%= link_to room.name, room_path(room.id) %>
+       <%= link_to "#{artsroom.room.name} - #{artsroom.art.title}", arts_room_path(artsroom.id) %>
+    </div>
+    <% end %>
     <% end%>
-  </p>
-<div>
+</div>
+</div>
