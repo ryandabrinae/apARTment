@@ -1,16 +1,38 @@
-<p>
-  <% @rooms.each do |room| %>
-     <%= link_to room.name, room_path(room.id) %>
-  <% end%>
-</p>
-<%= link_to "Create a new room", new_room_path %>
 
-<p>
-<% @arts.each do |art| %>
-  <h1><%= link_to art.title, art_path(art)%></h1>
-  <p> By <%= art.maker %> </p>
-  <%= art.year %>
-  <img src= <%= art.img_url %> />
-  <% end %>
-</p>
-<%= link_to "Add Art to Collection", searches_path %>
+<%= render "shared/navbar" %>
+<div class="profile-body">
+  <div class="profile-artside">
+
+    <% @arts.each do |art| %>
+      <div class="flex-art">
+      <h1><%= link_to art.title, art_path(art)%></h1>
+      <img class= "profiles-img" src= <%= art.img_url %>></img>
+      <div class="art-content">
+      <p> By <%= art.maker %> </p>
+      <p> Year:<%= art.year %></p>
+    </div>
+    </div>
+      <% end %>
+    <div class="links">
+    <%= link_to "+", searches_path %>
+  </div>
+</div>
+<div class="profile-roomside">
+
+    <% @rooms.each do |room| %>
+    <div class="roomdiv">
+    <iframe href= <%= room_path(room.id)%>></iframe>
+
+    <% end%>
+
+      <% @rooms.each do |room| %>
+        <%= link_to room.name, room_path(room.id) %>
+        <%end%>
+    </div>
+    <div class="links">
+    <%= link_to "+", new_room_path %>
+    </div>
+</div>
+
+</div>
+</div>

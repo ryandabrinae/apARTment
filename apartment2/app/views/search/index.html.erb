@@ -1,11 +1,6 @@
-<div class="search-container">
-<div class="header">
 
-</div>
-
-
-
-<div class="body"
+<%= render "shared/navbar" %>
+<div class="search-body">
 <%= form_tag search_keyword_path, class: "search", remote: true do %>
     <%= label_tag :keyword %>
     <%# nil is here in order to not set the value of the bar %>
@@ -14,9 +9,7 @@
     <%= submit_tag "Submit Search" %>
 <% end %>
 
-</div>
 
-<div class="footer">
-
+<div class="search-results"></div>
 </div>
 </div>

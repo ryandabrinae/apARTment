@@ -1,14 +1,11 @@
-<!-- <% content_for :head do %>
-  <% stylesheet_link_tag "style", "devise/" %>
-<% end %> -->
-<!-- <%= yield :head %> -->
+
 <div class="login-container">
   <div class="boxlogo">
-  <img src='logoFINAL.svg'></img>
+  <%= image_tag('logoFINAL-2.svg', class: 'login-logo') %>
 </div>
   <div class="flex-outer">
     <div class="flex-content">
-      <%= render "devise/shared/devise" %>
+
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="field">
       <%= f.label :email %><br />
@@ -21,18 +18,19 @@
     </div>
 
     <% if devise_mapping.rememberable? -%>
-      <div class="field">
+      <div class="field3">
         <%= f.check_box :remember_me %>
         <%= f.label :remember_me %>
       </div>
-    <% end -%>
+    <% end %>
 
     <div class="actions">
       <%= f.submit "Log in" %>
     </div>
+    <%= render "devise/shared/links" %>
   </div>
   </div>
 
-<!-- <%= render "devise/shared/links" %> -->
+
 </div>
 <% end %>
