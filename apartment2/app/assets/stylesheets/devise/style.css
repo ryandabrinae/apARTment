@@ -1,0 +1,75 @@
+.login-container {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+.boxlogo {
+  border-bottom-style: solid;
+  width: 450px;
+  margin-bottom: 10px;
+}
+#user_email:hover {
+    background-color: black;
+    color: white;
+}
+#user_password:hover {
+    background-color: black;
+    color: white;
+}
+#user_email {
+  height: 35px;
+  border-radius: 5px;
+
+  /*background-color: lightgrey;*/
+  display: flex;
+}
+#user_password {
+
+  height: 35px;
+  border-radius: 5px;
+  /*border-style: none;
+  background-color: lightgrey;*/
+  display: flex;
+}
+#i1{
+  margin-bottom: 10px;
+}
+.flex-outer {
+  height: 250px;
+  width: 450px;
+  /*background-color: lightgrey;*/
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+.heading {
+  font-size: 36px;
+  color: red;
+}
+.flex-content {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+label {
+  margin: 0 auto;
+}
+.actions {
+  margin: 0 auto;
+}
+.field {
+display: flex;
+flex-direction: column;
+margin-bottom: 10px;
+}
+.login-logo{
+  margin-bottom: 10px;
+}
