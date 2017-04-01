@@ -1,7 +1,12 @@
-<%= link_to "Create a new room", new_room_path %>
+<div class = "roomsLinksContainer">
 
-<p>
-  <% @rooms.each do |room| %>
-     <%= link_to room.name, room_path(room.id) %>
-  <% end%>
-</p>
+  <div class = "createRoom">
+    <%= link_to "Create a new room", new_room_path %>
+  </div>
+
+  <p class = "roomLink">
+    <% @rooms.each do |room| %>
+       <%= link_to room.name, room_path(room.id) %>
+    <% end%>
+  </p>
+<div>

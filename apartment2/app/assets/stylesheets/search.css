@@ -8,24 +8,22 @@ body{
 .artSearch{
   display: flex;
   flex-direction: column;
-  /*padding-left: 20vh;*/
   align-self: center;
-  /*height: 100vh;*/
 }
 
 #keyword{
   width: 40vh;
   height: 5vh;
-   border: 0;
+  border: 0;
   outline: 0;
   background: transparent;
   border-bottom: 1px solid black;
   margin-bottom: 6vh;
+  font-size: 20px;
 }
 
 .artList{
   margin-top: 6vh;
-
 }
 
 .artList a {
@@ -34,10 +32,10 @@ body{
   word-wrap:break-word;
   text-decoration: none;
   color: black;
+  border-bottom: 2px solid red;
 }
 
 .artList h3 {
-  /*font-size: 15px;*/
   width: 40vh;
   word-wrap:break-word;
 }
@@ -46,4 +44,34 @@ body{
 .artList img{
   width: 50vh;
   height: 50vh;
+}
+
+
+.roomsLinksContainer{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.createRoom{
+  align-self: center;
+}
+
+.createRoom a{
+  text-decoration: none;
+  color: black;
+  border-bottom: 2px solid red;
+  width: 22vh;
+}
+.roomLink a{
+
+  text-decoration: none;
+  color: black;
+  border-bottom: 2px solid red;
+}
+
+.roomLink{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
