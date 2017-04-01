@@ -6,7 +6,7 @@
   <% @arts.each do |art| %>
     <div class="gallery-art">
       <div class="flex-art">
-        <h2><%= link_to art.title, art_path(art)%></h2>
+        <h1><%= link_to art.title, art_path(art)%></h1>
         <div class="art-content">
           <p> By <%= art.maker %> </p>
           <p> Year:<%= art.year %></p>
