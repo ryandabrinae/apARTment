@@ -2,10 +2,14 @@ class ArtsroomsController < ApplicationController
     before_action :authenticate_user!
     def show
         @arts_room = ArtsRoom.find(params[:id])
-        if @arts_room.furniture 
-            @furniture = @arts_room.furniture
-        else 
+        @furniture = @arts_room.furniture
+
+        if @arts_room.room.type_of_room == "Bedroom" && !@furniture
             @furniture = Furniture.new
+            @furniture.type_of_furniture = "bed"
+        elsif @arts_room.room.type_of_room == "Living Room" && !@furniture
+            @furniture = Furniture.new
+            @furniture.type_of_furniture = "couch"
         end
     end
 
