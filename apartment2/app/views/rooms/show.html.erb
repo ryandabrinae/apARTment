@@ -1,5 +1,10 @@
+
+<%= render "shared/navbar" %>
+
+
 <div class = "showRoomName">
   <h1> <%= @room.name %> </h1>
+
 
 <p> Paintings:
   <ul>
@@ -22,3 +27,4 @@
 
   <%= button_to "Delete", delete_room_path, {method: :delete, class: "deleteRoomButton"}%>
 </div>
+
