@@ -1,0 +1,23 @@
+.gallery {
+    height: 90vh;
+    display: flex;
+    width: 90vw;
+    overflow: scroll;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.gallery-art {
+    display: flex; 
+    width: 500px;
+    height: 300px;
+    flex-direction: row;
+}
+
+.gallery-artsrooms {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
