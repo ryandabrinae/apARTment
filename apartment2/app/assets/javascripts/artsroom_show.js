@@ -44,7 +44,6 @@ $(document).ready(() => {
     }
 
     const createSelector = () => {
-        debugger
         roomType = $("h1").attr("name");
         select = $("<select>").addClass("furniture-selector");
         if(roomType === "Living Room"){

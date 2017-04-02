@@ -1,17 +1,38 @@
-
-
 <%= render "shared/navbar" %>
 
 <%= link_to "Add Art to Collection", searches_path %>
 
-<p>
-<% @arts.each do |art| %>
-  <h1><%= link_to art.title, art_path(art)%></h1>
-  <p> By <%= art.maker %> </p>
-  <%= art.year %>
-  <img src= <%= art.img_url %> />
-</p>
+<div class="gallery">
+  <% @arts.each do |art| %>
+    <div class="gallery-art">
+      <div class="flex-art">
+        <h1><%= link_to art.title, art_path(art)%></h1>
+        <div class="art-content">
+          <p> By <%= art.maker %> </p>
+          <p> Year:<%= art.year %></p>
+        </div>
+        <div class= "art-box">
+          <img class="profiles-img" src= <%= art.img_url %> />
+        </div>
+      </div>
+      <div class="gallery-artsrooms">
+        <% if art.arts_rooms.exists? %>
+          <h2> Rooms with this piece </h2>
+          <ul>
+            <% art.arts_rooms.each do |artsroom| %>
+              <li> <%= link_to artsroom.room.name, arts_room_path(artsroom.id) %></li>
+            <% end %>
+          </ul>
+        <% end %>
+        <h3> Add To A Room? </h3>
+          <%= form_for(@addToRoom) do |f| %>
+            <%= f.hidden_field :art, value: art.id %>
+            <%= select_tag(:room, options_from_collection_for_select(current_user.rooms, 'id', 'name')
+            ) %>
 
-
-<% end %>
+            <%= f.submit %>
+          <% end %>
+      </div>
+    </div>
+  <% end %>
 </div>

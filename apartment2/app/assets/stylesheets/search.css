@@ -56,6 +56,7 @@ body{
 
 .createRoom{
   align-self: center;
+  margin-bottom: 4vh;
 }
 
 .createRoom a{
@@ -77,11 +78,15 @@ body{
   justify-content: space-around;
 }
 
+search{
+   outline: none;
+}
 
 .showRoomName{
   height: 100vh;
   display: flex;
   flex-direction: column;
+  margin-left: 2vh;
 }
 
 .showRoomName h1{
@@ -105,18 +110,15 @@ body{
   border: none;
   background-color: white;
   font-size: 15px;
-}
-
-.addRoomButton{
-  border: none;
-  background-color: white;
-  font-size: 15px;
+  /*display: flex;*/
+  align-self: center;
+   outline: none;
 }
 
 .artsIndex{
-height: 100vh;
-display: flex;
-flex-direction: column;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .artsIndex img{
@@ -130,6 +132,7 @@ flex-direction: column;
   font-size: 20px;
 }
 
+<<<<<<< HEAD
 a:link {
   font-weight: semi-bold 600;
   color: #ababab;
@@ -137,4 +140,41 @@ a:link {
 
 a:visited {
   color:#585858;
+=======
+.newArtsRoom{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4vh;
+}
+
+.newArtsRoom #art{
+  margin-bottom: 2vh;
+  border: none;
+  background-color: white;
+  font-size: 14px;
+}
+
+.newArtsRoom input{
+   border: none;
+  background-color: white;
+  font-size: 15px;
+   outline: none;
+}
+
+.new_arts_room{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+   outline: none;
+}
+
+.searchArt input{
+   border: none;
+  background-color: white;
+  font-size: 15px;
+   outline: none;
+>>>>>>> afd0a4a8984022b60def354e6496c324ab5f32fa
 }
