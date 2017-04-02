@@ -3,10 +3,14 @@
 <div class="show-art">
     <div class="show-image">
         <div class="art-content"> 
-            <p> <%= @response["artObject"]["title"] %> </p>
+            <h2> <%= @response["artObject"]["title"] %> </h2>
+            <p> By: <%= @response["artObject"]["principalMaker"] %> </p>
+            <p> Year: <%= @response["artObject"]["dating"]["year"]%> </p>
         </div>    
+        
         <img class="profiles-img" src=<%= @response["artObject"]["webImage"]["url"]%> />
     </div>
+
     <%= form_for(@art) do |f| %>
         <%= f.hidden_field :title, value: @response["artObject"]["title"]%>
         <%= f.hidden_field :maker, value: @response["artObject"]["principalMaker"]%>
