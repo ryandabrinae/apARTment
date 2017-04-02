@@ -24,11 +24,11 @@
 }
 .profile-roomside{
   flex: 1;
-  overflow: scroll;
   /*border-style: solid;*/
   flex-wrap: wrap;
   height: 100%;
   display: flex;
+  flex-direction: column;
   padding-left: 20px;
   padding-right: 20px;
   border-left-style: solid;
@@ -144,4 +144,15 @@ div.links a {
 }
 a {
   text-decoration: none;
+}
+div.field input{
+  height: 35px;
+  border-radius: 5px;
+
+  /*background-color: lightgrey;*/
+  display: flex;
+}
+div.field input:hover{
+  background-color: black;
+  color: white;
 }

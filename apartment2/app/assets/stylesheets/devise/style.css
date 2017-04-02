@@ -12,38 +12,22 @@
   width: 450px;
   margin-bottom: 10px;
 }
-
-#user_email:hover {
-  background-color: black;
-  color: white;
-}
-#user_password:hover {
-  background-color: black;
-  color: white;
-}
-
-#user_email {
+div.field input{
   height: 35px;
   border-radius: 5px;
-
-  /*background-color: lightgrey;*/
+  background-color: lightgrey;
   display: flex;
 }
-#user_password {
-
-  height: 35px;
-  border-radius: 5px;
-  /*border-style: none;
-  background-color: lightgrey;*/
-  display: flex;
+div.field input:hover{
+  background-color: black;
+  color: white;
 }
 #i1{
   margin-bottom: 10px;
 }
 .flex-outer {
-  height: 250px;
+  /*height: 250px;*/
   width: 450px;
-  /*background-color: lightgrey;*/
   border-radius: 30px;
   display: flex;
   align-items: center;
@@ -74,35 +58,4 @@ margin-bottom: 10px;
 }
 .login-logo{
   margin-bottom: 10px;
-}
-
-.login-container a {
-  text-decoration: none;
-  color: black;
-}
-
-#login{
-  text-decoration: none;
-  color: black;
-  border: none;
-  background-color: white;
-  font-size: 15px;
-  outline: none;
-}
-
-#resetPass{
-  text-decoration: none;
-  color: black;
-  border: none;
-  background-color: white;
-  font-size: 15px;
-  outline: none;
-}
-
-#user-email{
-  border: 1 px solid black;
-}
-
-#user_password{
-
 }
