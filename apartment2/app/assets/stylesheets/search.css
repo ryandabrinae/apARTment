@@ -5,6 +5,17 @@ body{
   font-family: 'Muli', sans-serif;
 }
 
+h1 {
+  margin-left: 2px;
+  padding: 1%;
+  font-weight: bold;
+}
+
+h2 {
+  margin-left: 5px;
+  padding: 7px;
+}
+
 .artSearch{
   display: flex;
   flex-direction: column;
