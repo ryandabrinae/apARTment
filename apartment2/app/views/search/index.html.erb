@@ -2,15 +2,12 @@
     <%= javascript_include_tag "search" %>
 <% end %>
 <%= render "shared/navbar" %>
-<div class="search-container">
-
 <div class="search-body">
     <div class="artSearch"><%= form_tag search_keyword_path, class: "search", remote: true do %>
         <%# nil is here in order to not set the value of the bar %>
         <%= text_field_tag :keyword, nil, placeholder: "Search for art by any keyword" %>
             <!-- <%= submit_tag "Submit Search" %> -->
         <% end %>
-
-        <div class="search-results"></div>
     </div>
+    <div class="search-results"></div>
 </div>
