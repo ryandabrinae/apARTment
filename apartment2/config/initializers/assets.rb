@@ -12,3 +12,4 @@ Rails.application.config.assets.version = '1.0'
 
 Rails.application.config.assets.precompile += %w( artsroom_show.js )
 Rails.application.config.assets.precompile += %w( search.js.coffee )
+Rails.application.config.assets.precompile += %w( profile.js )
