@@ -5,6 +5,17 @@ body{
   font-family: 'Muli', sans-serif;
 }
 
+h1 {
+  margin-left: 2px;
+  padding: 1%;
+  font-weight: bold;
+}
+
+h2 {
+  margin-left: 5px;
+  padding: 7px;
+}
+
 .artSearch{
   display: flex;
   flex-direction: column;
@@ -132,6 +143,15 @@ search{
   font-size: 20px;
 }
 
+<<<<<<< HEAD
+a:link {
+  font-weight: semi-bold 600;
+  color: #ababab;
+}
+
+a:visited {
+  color:#585858;
+=======
 .newArtsRoom{
   display: flex;
   flex-direction: column;
@@ -167,4 +187,5 @@ search{
   background-color: white;
   font-size: 15px;
    outline: none;
+>>>>>>> afd0a4a8984022b60def354e6496c324ab5f32fa
 }
