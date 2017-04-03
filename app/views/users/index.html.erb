@@ -24,7 +24,7 @@
       <% room.arts_rooms.each do |artsroom| %>
         <div class="roomdiv">
           <iframe src= <%= "#{arts_room_path(artsroom.id)}#room" %>></iframe>
-          <%= link_to "#{artsroom.room.name} - #{artsroom.art.title}", arts_room_path(artsroom.id) %>
+          <%= link_to "#{artsroom.room.name} - #{artsroom.art.title}", arts_room_path(artsroom.id), :class => "iframe-link" %>
         </div>
       <% end %>
     <% end%>
