@@ -3,10 +3,10 @@
     <%= javascript_include_tag "profile" %>
 <% end %>
   <div class="profile-body">
-<div class="modal">
-  <div class="art-modal"></div>
-  <div class="room-modal"></div>
-</div>
+  <div class="modal">
+    <div class="art-modal"></div>
+    <div class="room-modal"></div>
+  </div>
     <div class="profile-artside">
         <% @arts.each do |art| %>
           <div class="flex-art">
@@ -21,7 +21,7 @@
         </div>
           <% end %>
         <div class="links">
-          <%= link_to "+", searches_path %>
+          <%= link_to "+", searches_path,:class => 'alinks' %>
         </div>
     </div>
   <div class="profile-roomside">

@@ -1,11 +1,22 @@
 $(document).ready(() => {
 
 
-$('.art-modal').append($('<button>').addClass('modal-button').text('Select'));
-$('.room-modal').append($('<button>').addClass('modal-button').text('Select'));
 
-$($(this)).click(function(){
-  $('.art-modal').attr('display','none');
+  $('.art-modal').append($('<h1>').addClass('modal-text').text('View My Art'));
+
+
+
+// $('.links').append('');
+$($('.art-modal')).click(function(){
+  // $('.art-modal').removeClass('.art-modal')
+  $('.art-modal').toggleClass('art-modal-off');
+})
+$('.room-modal').append($('<h1>').addClass('modal-text').text('View My Rooms'));
+
+
+$($('.room-modal')).click(function(){
+  // $('.art-modal').removeClass('.art-modal')
+  $('.room-modal').toggleClass('art-modal-off');
 })
 
 })

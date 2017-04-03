@@ -12,6 +12,8 @@
 }
 .profile-body {
   display: flex;
+  width: 100%;
+  height: 100vh;
 }
 .profile-artside{
   flex:3;
@@ -22,15 +24,15 @@
 }
 .profile-roomside{
   flex: 1;
-  /*border-style: solid;*/
   flex-wrap: wrap;
   height: 100%;
   display: flex;
-  flex-direction: column;
+  overflow: scroll;
   padding-left: 20px;
   padding-right: 20px;
   border-left-style: solid;
   border-color: gray;
+  flex-direction: column;
 }
 .navbar{
   border-bottom-style: solid;
@@ -44,7 +46,6 @@
   flex: 1;
 
 }
-
 .navh:hover {
 /*color: white;*/
 text-align: center;
@@ -146,32 +147,41 @@ a {
 }
 /*Modal*/
 .modal{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  z-index: 1;
+  position: fixed;
+}
+.art-modal{
 z-index: 1;
 display: flex;
 position: relative;
-width: 100%;
-height: 100%;
-}
-.art-modal{
-  z-index: 1;
-  display: flex;
-  position: fixed;
-  background-color: white;
-/* flex: 2; */
+background-color: white;
 width: 70%;
 height: 100%;
+justify-content: center;
+text-align: center;
+flex-direction: column;
 }
 .room-modal{
   z-index: 1;
   display: flex;
-  position: fixed;
+  position: relative;
   background-color: white;
-     margin: auto;
-    width: 30%;
-    height: 100%;
+  width: 30%;
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
 }
-.modal-button{
+.art-modal-off{
+  display: none;
+}
+/*.modal-button{
   background-color: black;
   width: 100px;
   height: 50px;
-}
+  margin-top: 45%;
+  color: white;
+}*/
