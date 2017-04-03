@@ -81,7 +81,7 @@ $(document).ready(() => {
         });
     }
 
-    if ($("#furniture_type_number").attr("value")){
+    if ($(".room-info").attr("value") === "room"){
         furnitureMatch();
         createSelector();
         listenFurnSelection();
