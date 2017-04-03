@@ -14,7 +14,7 @@ $ ->
 
 
             pieceHolder.append(title, image)
-            $('body').append(pieceHolder)
+            $('.search-results').append(pieceHolder)
     )
 
     # currentColor = "#5B245B"

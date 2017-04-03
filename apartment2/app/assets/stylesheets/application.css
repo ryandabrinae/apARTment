@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+
+form input {
+    border: none;
+    background-color: white;
+    font-size: 15px;
+}
+
+form input[type=submit]:hover {
+    background-color: #ababab;
+    color: white;
+    cursor: hand;
+}
+
+select {
+    border: none;
+    background-color: white;
+    font-size: 14px;
+    margin-bottom: 5px;
+}

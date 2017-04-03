@@ -143,7 +143,6 @@ search{
   font-size: 20px;
 }
 
-<<<<<<< HEAD
 a:link {
   font-weight: semi-bold 600;
   color: #ababab;
@@ -151,7 +150,7 @@ a:link {
 
 a:visited {
   color:#585858;
-=======
+
 .newArtsRoom{
   display: flex;
   flex-direction: column;
@@ -187,5 +186,4 @@ a:visited {
   background-color: white;
   font-size: 15px;
    outline: none;
->>>>>>> afd0a4a8984022b60def354e6496c324ab5f32fa
 }
