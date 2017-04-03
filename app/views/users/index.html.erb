@@ -23,7 +23,7 @@
     <% @rooms.each do |room| %>
       <% room.arts_rooms.each do |artsroom| %>
         <div class="roomdiv">
-        <iframe href= <%= arts_room_path(artsroom.id) %>></iframe>
+        <iframe src= <%= "#{arts_room_path(artsroom.id)}#room" %>></iframe>
         <%= link_to "#{artsroom.room.name} - #{artsroom.art.title}", arts_room_path(artsroom.id) %>
         </div>
       <% end %>
