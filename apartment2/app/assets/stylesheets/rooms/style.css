@@ -54,7 +54,11 @@
     flex-flow: row wrap;
 }
 
-.roomsLinksContainer h2{
-  /*height: 10vh;*/
-  /*margin-left: 4vh;*/
-}
+
+/*.roomsLinksContainer{
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+
+}*/
+
