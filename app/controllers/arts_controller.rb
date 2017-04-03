@@ -4,7 +4,7 @@ before_action :authenticate_user!
 
   def index
     @addToRoom = ArtsRoom.new
-    @arts = Art.all
+    @arts = Art.where(user_id: current_user.id)
   end
 
   def create
