@@ -33,4 +33,15 @@ select {
     margin-bottom: 5px;
 }
 
-/*HELLO*/
+.roomdiv {
+    overflow: hidden;
+}
+
+iframe {
+    position: relative;
+    left: -440px;
+    zoom: 0.8;
+    transform: scale(0.25);
+    width: 1280px;
+    height: 800px;
+}
