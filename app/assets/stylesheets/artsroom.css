@@ -8,7 +8,7 @@ h2 {
   margin-left: 2px;
   padding: 7px;
 }
-
+`
 .room {
     align-items: center;
     position: relative;
@@ -92,31 +92,3 @@ a:link {
 a:visited {
   color:#585858;
 }
-
-select  {
-  /*-webkit-appearance: menulist-button;*/
-   -webkit-border-radius: 2px;
-   -webkit-padding-end: 20px;
-   -webkit-padding-start: 2px;
-   -webkit-user-select: none;
-   /*background-position: 97% center;*/
-   /*background-repeat: no-repeat;*/
-   border: 1px solid #AAA;
-   color: black;
-   margin: 20px;
-   overflow: hidden;
-   padding: 5px 10px;
-   background-color: #ababab;
-}
-
-input[type=submit]  {
-    -webkit-border-radius: 2px;
-   background-position: 97% center;
-   background-repeat: no-repeat;
-   border: 1px solid #AAA;
-   color: black;
-   margin: 20px;
-   overflow: hidden;
-   padding: 5px 10px;
-}
-
