@@ -16,10 +16,12 @@
           <h2> <%= link_to room.name, room_path(room.id) %> </h2>
           <div class= "per-room-art-container">
             <% room.arts_rooms.each do |arts_room| %>
-              <div class= "per-room-art-box">
-                <h3> <%= link_to arts_room.art.title, arts_room_path(arts_room.id) %> </h3>
-                <img class="per-room-img" src= <%= arts_room.art.img_url %> />
-              </div>
+              <% if arts_room.room.user_id == curren_user.id %>
+                <div class= "per-room-art-box">
+                  <h3> <%= link_to arts_room.art.title, arts_room_path(arts_room.id) %> </h3>
+                  <img class="per-room-img" src= <%= arts_room.art.img_url %> />
+                </div>
+              <% end %>
             <% end %>
           </div>
         </div>
