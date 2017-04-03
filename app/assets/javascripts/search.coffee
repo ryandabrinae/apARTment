@@ -1,5 +1,4 @@
 $ ->
-    console.log('bitches')
     $(".search").on("ajax:success", (e, data, status, xhr) ->
         # console.log(data);
         for i in data.artObjects

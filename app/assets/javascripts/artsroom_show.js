@@ -1,5 +1,5 @@
 $(document).ready(() => {
-
+    console.log('helo');
     const furnitureMatch = () => {
 
         // If there is a value in the form ID-ing the furniture
