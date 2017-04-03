@@ -44,4 +44,5 @@ iframe {
     transform: scale(0.25);
     width: 1280px;
     height: 800px;
+    margin: -300px 0;
 }
