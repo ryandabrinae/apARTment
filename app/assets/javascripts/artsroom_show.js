@@ -1,10 +1,8 @@
 $(document).ready(() => {
-    console.log("HELP");
     const furnitureMatch = () => {
 
         // If there is a value in the form ID-ing the furniture
         if ($("#furniture_type_number").attr("value")){
-            console.log("furniture triggered");
             
             // Finds the specific couch/bed (e.g. couch1)
             furnitureType = $("#furniture_type_number").attr("value");
@@ -45,7 +43,6 @@ $(document).ready(() => {
     }
 
     const createSelector = () => {
-        console.log("createSelector trigger");
         roomType = $("h1").attr("name");
         select = $("<select>").addClass("furniture-selector");
         if(roomType === "Living Room"){
@@ -85,7 +82,6 @@ $(document).ready(() => {
     }
 
     if ($(".room-info").attr("value") === "room"){
-        console.log("if statement triggered");
         furnitureMatch();
         createSelector();
         listenFurnSelection();
