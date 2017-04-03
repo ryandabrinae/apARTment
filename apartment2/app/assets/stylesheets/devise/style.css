@@ -24,15 +24,14 @@
 
 #user_email {
   height: 35px;
-  border-radius: 5px;
-
+border-bottom: 1px solid black;
   /*background-color: lightgrey;*/
   display: flex;
 }
 #user_password {
-
+border-bottom: 1px solid black;
   height: 35px;
-  border-radius: 5px;
+  /*border-radius: 5px;*/
   /*border-style: none;
   background-color: lightgrey;*/
   display: flex;
@@ -44,7 +43,7 @@
   height: 250px;
   width: 450px;
   /*background-color: lightgrey;*/
-  border-radius: 30px;
+  /*border-radius: 30px;*/
   display: flex;
   align-items: center;
   justify-content: center;
@@ -101,8 +100,37 @@ margin-bottom: 10px;
 
 #user-email{
   border: 1 px solid black;
+  background-color: red;
+  border-bottom: 1px solid black;
 }
 
 #user_password{
-
+border-bottom: 1px solid black;
 }
+
+input  {
+
+   /*background-position: 97% center;*/
+   background-repeat: no-repeat;
+   border: 1px solid #AAA;
+   color: black;
+   margin: 20px;
+   overflow: hidden;
+   padding: 5px 10px;
+   border-bottom: 1px solid black;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-transition-delay: 9999s;
+    -webkit-transition: color: 9999s ease-out, background-color gray ease-out;
+    -webkit-text-fill-color: black;
+    -webkit-border-bottom: 1px solid black;
+}
+
+
+
+
+

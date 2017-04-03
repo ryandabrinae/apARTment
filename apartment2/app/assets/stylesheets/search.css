@@ -89,9 +89,6 @@ h2 {
   justify-content: space-around;
 }
 
-search{
-   outline: none;
-}
 
 .showRoomName{
   height: 100vh;
@@ -151,7 +148,7 @@ a:link {
 a:visited {
   color:#585858;
 
-.newArtsRoom{
+.newArtsRoom {
   display: flex;
   flex-direction: column;
   justify-content: center;
