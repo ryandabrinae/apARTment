@@ -58,19 +58,15 @@ h2 {
 }
 
 
-.roomsLinksContainer{
-  font-size: 20px;
+.createRoom{
   display: flex;
   flex-direction: column;
-  height: 100vh;
-}
-
-.createRoom{
-  align-self: center;
+  align-content: center;
   margin-bottom: 4vh;
 }
 
 .createRoom a{
+  text-align: center;
   text-decoration: none;
   color: black;
   /*border-bottom: 2px solid red;*/
