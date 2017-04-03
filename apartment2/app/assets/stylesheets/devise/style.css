@@ -13,26 +13,19 @@
   margin-bottom: 10px;
 }
 
-#user_email:hover {
-  background-color: black;
-  color: white;
-}
-#user_password:hover {
-  background-color: black;
-  color: white;
-}
-
 #user_email {
+  border-bottom: 1px solid black;
   height: 35px;
-  border-radius: 5px;
+  width: 20vw;
+  /*border-radius: 5px;*/
 
   /*background-color: lightgrey;*/
-  display: flex;
+  /*display: flex;*/
 }
 #user_password {
 
   height: 35px;
-  border-radius: 5px;
+  /*border-radius: 5px;*/
   /*border-style: none;
   background-color: lightgrey;*/
   display: flex;
@@ -44,7 +37,7 @@
   height: 250px;
   width: 450px;
   /*background-color: lightgrey;*/
-  border-radius: 30px;
+  /*border-radius: 30px;*/
   display: flex;
   align-items: center;
   justify-content: center;
@@ -61,10 +54,9 @@
   justify-content: center;
   align-items: center;
 }
-label {
-  margin: 0 auto;
-}
+
 .actions {
+  text-align: center;
   margin: 0 auto;
 }
 .field {
@@ -82,12 +74,7 @@ margin-bottom: 10px;
 }
 
 #login{
-  text-decoration: none;
-  color: black;
-  border: none;
-  background-color: white;
-  font-size: 15px;
-  outline: none;
+  margin: 10px auto;
 }
 
 #resetPass{
@@ -99,10 +86,6 @@ margin-bottom: 10px;
   outline: none;
 }
 
-#user-email{
-  border: 1 px solid black;
-}
-
 #user_password{
-
+  border-bottom: 1px solid black
 }
