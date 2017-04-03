@@ -12,8 +12,6 @@
 }
 .profile-body {
   display: flex;
-  height: 90%;
-  /*margin-bottom: 100px;*/
 }
 .profile-artside{
   flex:3;
@@ -24,11 +22,11 @@
 }
 .profile-roomside{
   flex: 1;
-  overflow: scroll;
   /*border-style: solid;*/
   flex-wrap: wrap;
   height: 100%;
   display: flex;
+  flex-direction: column;
   padding-left: 20px;
   padding-right: 20px;
   border-left-style: solid;
@@ -44,18 +42,18 @@
   text-align: center;
   padding-top: 15px;
   flex: 1;
+
 }
 
-.navh:hover{
-/*color: grey;*/
+.navh:hover {
+/*color: white;*/
 text-align: center;
-/*background-color: black;*/
+background-color: black;
 text-decoration: none;
 }
 
 div.navh a:hover{
-  color: #ababab;
-  font-weight: bold;
+  color: white;
   text-decoration: none;
 }
 .navflex {
@@ -70,6 +68,9 @@ div.navh a:hover{
   width: 30%;
 }
 div.navbar a {
+  display: block;
+  width: 100%;
+  height: 100%;
   text-decoration: none;
   color: black;
 }
@@ -102,7 +103,7 @@ div.flex-art img {
   justify-content: center;
   text-align: center;
   text-decoration: none;
-  padding-bottom: 20px;
+  padding: 10px;
 }
 div.roomdiv iframe{
   margin-bottom: 10px;
@@ -142,4 +143,35 @@ div.links a {
 }
 a {
   text-decoration: none;
+}
+/*Modal*/
+.modal{
+z-index: 1;
+display: flex;
+position: relative;
+width: 100%;
+height: 100%;
+}
+.art-modal{
+  z-index: 1;
+  display: flex;
+  position: fixed;
+  background-color: white;
+/* flex: 2; */
+width: 70%;
+height: 100%;
+}
+.room-modal{
+  z-index: 1;
+  display: flex;
+  position: fixed;
+  background-color: white;
+     margin: auto;
+    width: 30%;
+    height: 100%;
+}
+.modal-button{
+  background-color: black;
+  width: 100px;
+  height: 50px;
 }
