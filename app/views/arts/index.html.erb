@@ -22,7 +22,9 @@
           <h2> Rooms with this piece </h2>
           <ul>
             <% art.arts_rooms.each do |artsroom| %>
-              <li> <%= link_to artsroom.room.name, arts_room_path(artsroom.id) %></li>
+              <% if artsroom.room.user_id = current_user.id %>
+                <li> <%= link_to artsroom.room.name, arts_room_path(artsroom.id) %></li>
+              <% end %>
             <% end %>
           </ul>
         <% end %>
