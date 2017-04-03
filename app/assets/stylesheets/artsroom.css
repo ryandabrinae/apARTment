@@ -21,11 +21,11 @@ h2 {
 }
 
 .bedroom {
-    background: white center/cover url('bedroom.svg');
+    background: white center/cover image-url('bedroom.svg');
 }
 
 .living {
-    background: white center/cover url("living.svg");
+    background: white center/cover image-url("living.svg");
 }
 
 .palette {
