@@ -1,0 +1,692 @@
+h1 {
+  margin-left: 2px;
+  padding: 1%;
+  font-weight: bold;
+}
+
+h2 {
+  margin-left: 2px;
+  padding: 7px;
+}
+
+.room {
+    align-items: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100vh;
+    margin: 0 auto;
+    min-height: 700px;
+}
+
+.bedroom {
+    background: white center/cover image-url('bedroom.svg');
+}
+
+.living {
+    background: white center/cover image-url("living.svg");
+}
+
+.palette {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 25vh;
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+}
+
+.colors {
+    border: 1px solid black;
+    margin-bottom: 15px;
+}
+
+.color {
+    display: inline-block;
+    margin: 6px;
+    height: 30px;
+    width: 30px;
+}
+
+.options {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.furniture {
+    position: absolute;
+    margin: 0 auto;
+    top: 53vh;
+    width: 370px;
+}
+
+.couch {
+    padding-right: 1vw;
+}
+
+.frame {
+    border: ;
+    width: 13%;
+}
+
+.art {
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+a:link {
+  font-weight: semi-bold 600;
+  color: #ababab;
+}
+
+a:visited {
+  color:#585858;
+}
+.login-container {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+.boxlogo {
+  border-bottom-style: solid;
+  width: 450px;
+  margin-bottom: 10px;
+}
+
+#user_email {
+  border-bottom: 1px solid black;
+  height: 35px;
+  width: 20vw;
+  /*border-radius: 5px;*/
+
+  /*background-color: lightgrey;*/
+  /*display: flex;*/
+}
+#user_password {
+
+  height: 35px;
+  /*border-radius: 5px;*/
+  /*border-style: none;
+  background-color: lightgrey;*/
+  display: flex;
+}
+#i1{
+  margin-bottom: 10px;
+}
+.flex-outer {
+  height: 250px;
+  width: 450px;
+  /*background-color: lightgrey;*/
+  /*border-radius: 30px;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+.heading {
+  font-size: 36px;
+  color: red;
+}
+.flex-content {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.actions {
+  text-align: center;
+  margin: 0 auto;
+}
+.field {
+display: flex;
+flex-direction: column;
+margin-bottom: 10px;
+}
+.login-logo{
+  /*margin-bottom: 10px;*/
+}
+
+.login-container a {
+  text-decoration: none;
+  color: black;
+}
+
+#login{
+  margin: 10px auto;
+}
+
+#resetPass{
+  text-decoration: none;
+  color: black;
+  border: none;
+  background-color: white;
+  font-size: 15px;
+  outline: none;
+}
+
+#user_password{
+  border-bottom: 1px solid black
+}
+.gallery {
+    height: 90vh;
+    display: flex;
+    width: 90vw;
+    overflow: scroll;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.addArt{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bolder;
+  font-size: 20px;
+
+}
+.gallery-art {
+    display: flex;
+    width: 500px;
+    height: 300px;
+    flex-direction: row;
+}
+
+.gallery-artsrooms {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.show-art {
+    align-items: center;
+    margin: 0 auto;
+    display: flex;
+    width: 80vw;
+    height: 90vh;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.show-image {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+* {
+  margin: 0;
+}
+.profile-container {
+  width: 100vw;
+  height: 100vh;
+}
+.profile-header {
+  height: 50px;
+  width: 100%;
+  padding-bottom: 10px;
+}
+.profile-body {
+  display: flex;
+  height: 90%;
+  /*margin-bottom: 100px;*/
+}
+.profile-artside{
+  flex:3;
+  overflow: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 5px;
+}
+.profile-roomside{
+  flex: 1;
+  overflow: scroll;
+  /*border-style: solid;*/
+  flex-wrap: wrap;
+  height: 100%;
+  display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-left-style: solid;
+  border-color: gray;
+}
+.navbar{
+  border-bottom-style: solid;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+}
+.navh {
+  text-align: center;
+  padding-top: 15px;
+  flex: 1;
+}
+
+.navh:hover{
+/*color: grey;*/
+text-align: center;
+/*background-color: black;*/
+text-decoration: none;
+}
+
+div.navh a:hover{
+  color: #ababab;
+  font-weight: bold;
+  text-decoration: none;
+}
+.navflex {
+  flex: 3;
+}
+.small-logo{
+  height: 50px;
+  padding-right: 15px;
+
+}
+.profiles-img{
+  width: 30%;
+}
+div.navbar a {
+  text-decoration: none;
+  color: black;
+}
+iframe {
+  width: 100%;
+  height: 50%;
+  margin: 0 auto;
+}
+.flex-art {
+width: 40%;
+padding: 10px;
+text-align: center;
+margin: auto;
+}
+.flex-art:hover{
+  background-color: lightgrey;
+}
+div.flex-art h1{
+  font-size: 16px;
+}
+
+div.flex-art img {
+  flex: 1;
+}
+
+.roomdiv{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  padding-bottom: 20px;
+}
+div.roomdiv iframe{
+  margin-bottom: 10px;
+}
+div.roomdiv:hover{
+  background-color: lightgrey;
+  transition: all 0.5s ease;
+}
+.links {
+  width: 100%;
+  text-align: center;
+}
+div.links a {
+  -moz-box-shadow: 3px 4px 0px 0px #899599;
+    -webkit-box-shadow: 3px 4px 0px 0px #899599;
+    box-shadow: 1px 2px 0px 0px #899599;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #bab1ba));
+    background: -moz-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+    background: -webkit-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+    background: -o-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+    background: -ms-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+    background: linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#bab1ba',GradientType=0);
+    background-color: #ededed;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 52%;
+    /* border: 1px solid #d6bcd6; */
+    display: inline-block;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.56);
+    font-family: Arial;
+    font-size: 29px;
+    padding: 7px 20px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #e1e2ed;
+}
+a {
+  text-decoration: none;
+}
+.rooms {
+    display: flex;
+    flex-direction: column;
+    height: 120vh;
+    justify-content: space-around;
+    overflow: scroll;
+    width: 100vw;
+    margin: 0 4vh 0 4vh;
+    /*height: 300vh;*/
+}
+
+.rooms h2, .room-each h2 {
+    text-align: center;
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+
+}
+
+.room-each {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20vh;
+    height: 80vh;
+}
+
+
+.art-per-room {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.per-room-art-box {
+    width: 25vw;
+    height: 40vh;
+    margin: 0 auto;
+}
+
+.per-room-art-box img {
+    /*width: 100%;*/
+    height: 18vh;
+}
+
+.per-room-art-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 100%;
+    height: 80vh;
+    margin-bottom: 4vh;
+}
+
+.room-paintings {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+/*.roomsLinksContainer{
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+
+}*/
+
+body{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: 'Muli', sans-serif;
+}
+
+h1 {
+  margin-left: 2px;
+  padding: 1%;
+  font-weight: bold;
+}
+
+h2 {
+  margin-left: 5px;
+  padding: 7px;
+}
+
+.artSearch{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+#keyword{
+  width: 40vh;
+  height: 5vh;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid black;
+  margin-bottom: 6vh;
+  font-size: 20px;
+}
+
+.artList{
+  margin-top: 6vh;
+}
+
+.artList a {
+  font-size: 15px;
+  width: 10vh;
+  word-wrap:break-word;
+  text-decoration: none;
+  color: black;
+  /*border-bottom: 2px solid red;*/
+}
+
+.artList h3 {
+  width: 40vh;
+  word-wrap:break-word;
+}
+
+
+.artList img{
+  width: 50vh;
+  height: 50vh;
+}
+
+.createRoom{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin-bottom: 4vh;
+}
+
+.createRoom a{
+  margin-top: 2vh;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  /*border-bottom: 2px solid red;*/
+  width: 30vh;
+  align-self: center;
+  font-size: 20px;
+}
+.roomLink a{
+
+  text-decoration: none;
+  color: black;
+  /*border-bottom: 2px solid red;*/
+}
+
+.roomLink{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+search{
+   outline: none;
+}
+
+.showRoomName{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-left: 2vh;
+}
+
+.showRoomName h1{
+  align-self: center;
+}
+
+.showRoomName #art{
+  width: 40%;
+}
+
+.showRoomName li{
+  list-style-type: none;
+}
+
+.showRoomName a {
+  text-decoration: none;
+  color: black;
+}
+
+.deleteRoomButton{
+  border: none;
+  background-color: white;
+  font-size: 15px;
+  /*display: flex;*/
+  align-self: center;
+   outline: none;
+}
+
+.artsIndex{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.artsIndex img{
+  width: 50vh;
+  height: 50vh;
+}
+
+.artsIndex a{
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+a:link {
+  font-weight: semi-bold 600;
+  color: #ababab;
+}
+
+a:visited {
+  color:#585858;
+}
+
+.newArtsRoom{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4vh;
+}
+
+.newArtsRoom #art{
+  margin-bottom: 2vh;
+  border: none;
+  background-color: white;
+  font-size: 14px;
+}
+
+.newArtsRoom input{
+   border: none;
+  background-color: white;
+  font-size: 15px;
+   outline: none;
+}
+
+.new_arts_room{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+   outline: none;
+}
+
+.searchArt input{
+   border: none;
+  background-color: white;
+  font-size: 15px;
+   outline: none;
+}
+.search{
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.search-results {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: space-around;
+  overflow: scroll;
+  width: 100%;
+}
+
+.search-body {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+}
+
+
+.results-img {
+  width: 20%;
+  margin: 0 auto;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+
+form input {
+    border: none;
+    background-color: white;
+    font-size: 15px;
+}
+
+form input[type=submit]:hover {
+    background-color: #ababab;
+    color: white;
+    cursor: hand;
+}
+
+select {
+    border: 1px solid #AAA;
+    background-color: white;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+/*HELLO*/
