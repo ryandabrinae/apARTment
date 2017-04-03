@@ -1,32 +1,29 @@
-
 <%= render "shared/navbar" %>
 
 
 <div class = "showRoomName">
   <h1> <%= @room.name %> </h1>
 
+  <div class = "newArtsRoom">
+    <%= form_for(@addToRoom) do |f| %>
+        <%= f.hidden_field :room, value: @room.id %>
+        <%# select tags are made from a collection accessed through arts here, with the id of the arts as the value%>
+        <%# The name is defined by the method madeBy defined in the model %>
+        <%= select_tag(:art, options_from_collection_for_select(current_user.arts, 'id', "madeBy")
+        ) %>
+        <%= f.submit %>
+    <% end %>
 
-<p> Paintings:
-<br>
-<br>
-  <ul>
-  <% @room.arts_rooms.each do |arts_room| %>
-      <li> <%= link_to arts_room.art.title, arts_room_path(arts_room.id) %> </li>
-  <% end%>
-  </ul>
-</p>
-
-<div class = "newArtsRoom">
-  <%= form_for(@addToRoom) do |f| %>
-      <%= f.hidden_field :room, value: @room.id %>
-      <%# select tags are made from a collection accessed through arts here, with the id of the arts as the value%>
-      <%# The name is defined by the method madeBy defined in the model %>
-      <%= select_tag(:art, options_from_collection_for_select(current_user.arts, 'id', "madeBy")
-      ) %>
     <br>
-      <%= f.submit %>
-  <% end %>
+    <%= button_to "Delete This Room", delete_room_path, {method: :delete, class: "deleteRoomButton"}%>
+  </div>
 
-  <%= button_to "Delete", delete_room_path, {method: :delete, class: "deleteRoomButton"}%>
-</div>
+  <h3> Paintings </h3>
+  <div class="room-paintings">
+    <% @room.arts_rooms.each do |arts_room| %>
+      <div class= "per-room-art-box"> 
+        <h3> <%= link_to arts_room.art.title, arts_room_path(arts_room.id) %> </h3>
+        <img class="per-room-img" src= <%= arts_room.art.img_url %> />
+      </div>
+    <% end %>
 </div>

@@ -6,9 +6,24 @@
     <%= link_to "Create a new room", new_room_path %>
   </div>
 
-  <p class = "roomLink">
-    <% @rooms.each do |room| %>
-       <%= link_to room.name, room_path(room.id) %>
-    <% end%>
-  </p>
-<div>
+  <div class="rooms">
+    <% if @rooms.empty? %>
+      <h2 class="greyed-out"> You don't have any rooms saved yet </h2>
+      <p class="greyed-out"> Click the link above to create a new room </p>
+    <% else %>
+      <% @rooms.each do |room| %>
+        <div class="room-each">
+          <h2> <%= link_to room.name, room_path(room.id) %> </h2>
+          <div class= "per-room-art-container"> 
+            <% room.arts_rooms.each do |arts_room| %>
+              <div class= "per-room-art-box"> 
+                <h3> <%= link_to arts_room.art.title, arts_room_path(arts_room.id) %> </h3>
+                <img class="per-room-img" src= <%= arts_room.art.img_url %> />
+              </div>
+            <% end %>
+          </div>
+        </div>
+      <% end%>
+    <% end %>
+  </div>
+</div>
