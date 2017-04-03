@@ -1,6 +1,8 @@
 <%= render "shared/navbar" %>
 
-<%= link_to "Add Art to Collection", searches_path %>
+<div class = "addArt">
+  <%= link_to "Add Art to Collection", searches_path %>
+  </div>
 
 <div class="gallery">
   <% @arts.each do |art| %>
