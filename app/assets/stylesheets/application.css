@@ -50,3 +50,13 @@ iframe {
 .iframe-link {
     margin-top: -200px;
 }
+
+.nothing-here {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.nothing-here h2, p {
+    text-align: center;
+}
