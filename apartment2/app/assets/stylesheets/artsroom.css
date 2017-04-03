@@ -64,8 +64,11 @@ h2 {
     position: absolute;
     margin: 0 auto;
     top: 53vh;
-    left: 34.5vw;
     width: 370px;
+}
+
+.couch {
+    padding-right: 1vw;
 }
 
 .frame {
@@ -91,14 +94,13 @@ a:visited {
 }
 
 select  {
-  -webkit-appearance: button;
+  /*-webkit-appearance: menulist-button;*/
    -webkit-border-radius: 2px;
-   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
    -webkit-padding-end: 20px;
    -webkit-padding-start: 2px;
    -webkit-user-select: none;
-   background-position: 97% center;
-   background-repeat: no-repeat;
+   /*background-position: 97% center;*/
+   /*background-repeat: no-repeat;*/
    border: 1px solid #AAA;
    color: black;
    margin: 20px;
@@ -108,14 +110,13 @@ select  {
 }
 
 input[type=submit]  {
-
+    -webkit-border-radius: 2px;
    background-position: 97% center;
    background-repeat: no-repeat;
    border: 1px solid #AAA;
    color: black;
    margin: 20px;
-  overflow: hidden;
+   overflow: hidden;
    padding: 5px 10px;
-   background-color: #ababab;
 }
 
