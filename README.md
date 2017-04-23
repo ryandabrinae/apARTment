@@ -48,6 +48,5 @@ add art and rooms to your account, which will appear on the front page (the prof
 
 ---
 ### Wireframes
-
-
+![alt tag](./wireframes/art-show.png)
 
